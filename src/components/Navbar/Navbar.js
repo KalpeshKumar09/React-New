@@ -30,25 +30,25 @@ const Navbar = () => {
               Dashboard
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/" className={Lankness("User")}>
               User
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/Booking" className={Lankness("Booking")}>
               Booking
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/" className={Lankness("Product")}>
               Product
             </Link>
-          </li>
+          </li> */}
 
-          <li>
+          {/* <li>
             <Link className={Lankness("Order")}>Orders</Link>
-          </li>
+          </li> */}
         </ul>
 
         <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-8 md:flex-row md:gap-8 sm:flex-row sm:gap-8">
@@ -60,7 +60,7 @@ const Navbar = () => {
           </span>
           <div className="flex items-center justify-center p-3">
             <div className="relative inline-block text-left dropdown">
-              <span className="rounded-md shadow-sm">
+              <span className="rounded-md shadow-lg">
                 <button
                   className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out bg-white rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
                   type="button"

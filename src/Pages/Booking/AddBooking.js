@@ -35,14 +35,13 @@ const initialState = {
 };
 
 const AddBooking = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [data, setData] = useState(initialState);
   const {profile,name, email, mobileNo} = data
   const [file, setFile] = useState(null);
   const [progress, setProgress] = useState(null);
   const [errors, setErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const navigate = useNavigate();
   const { id } = useParams();
 
   useEffect(() => {
@@ -143,7 +142,8 @@ const AddBooking = () => {
                     placeholder=" "
                     required
                     value={profile}
-                    onChange={(e) => setFile(e.target.files[0])}
+                    // onChange={(e) => setFile(e.target.files[0])}
+                    onChange={handleChange}
                   />
                   <label
                     htmlFor="profile"
@@ -410,7 +410,7 @@ const AddBooking = () => {
             </div>
   </div>*/}
               <button
-              disabled={progress !== null && progress < 100}
+              /* disabled={progress !== null && progress < 100} */
                 type="submit"
                 className=" text-white bg-violet-700 hover:bg-violet-700 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-violet-700 dark:hover:bg-violet-700 dark:focus:ring-violet-700"
               >
