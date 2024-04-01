@@ -109,9 +109,19 @@ const AddBooking = ({onClose}) => {
     file && uploadFile();
   }, [file]);
 
-  const handleChange = (e) => {
+   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
-  };
+  }; 
+  /* const handleChange = (e) => {
+    if (e.target.name === "profile") {
+      // Handle profile image separately
+      const file = e.target.files[0];
+      setFile(file);
+    } else {
+      setData({ ...data, [e.target.name]: e.target.value });
+    }
+  }; */
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -141,7 +151,7 @@ const AddBooking = ({onClose}) => {
 
   return (
     <div className=" w-full h-screen flex  justify-start bg-gray-50 px-4 sm:px-6 lg:px-8 ">
-      <div className=" w-full space-y-8 pl-10 pr-10">
+      <div className=" absolute w-full space-y-8 pl-10 pr-10">
       <button onClick={onClose} className="place-self-end">
           <GiTireIronCross size={20}/>
         </button>
@@ -457,7 +467,7 @@ const AddBooking = ({onClose}) => {
                 </div>
               </div>
               <button
-                /* disabled={progress !== null && progress < 100} */
+                // disabled={progress !== null && progress < 5}
                 type="submit"
                 className=" text-white bg-violet-700 hover:bg-violet-700 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-violet-700 dark:hover:bg-violet-700 dark:focus:ring-violet-700"
               >

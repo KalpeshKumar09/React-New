@@ -5,7 +5,7 @@ const BookingList = ({open, setOpen, img, name, email, mobileNo, id, handleDelet
     <div onClose={() => setOpen(false)} onOpen={() => setOpen(true)} open={open}> 
       <h2>Booking Details</h2>
       <div>
-        <div  src={img}></div>
+        <img src={img} alt="Booking" />
         <div>
           <header>{name}</header>
           <p>{email}</p>
@@ -21,3 +21,5 @@ const BookingList = ({open, setOpen, img, name, email, mobileNo, id, handleDelet
 }
 
 export default BookingList
+
+
