@@ -1,5 +1,7 @@
 import "./navbar.css";
-import { Link, useLocation, /* useNavigate */ } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { IoIosNotificationsOutline } from "react-icons/io";
+import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   let { pathname } = useLocation();
@@ -24,7 +26,7 @@ const Navbar = () => {
       <div className="absolute top-0 left-0 w-full flex flex-col gap-6 shadow-md items-center text-lg lg:static lg:flex-row lg:justify-between md:flex-row md:justify-between sm:flex-row sm:justify-between">
         <ul className="flex flex-col items-center gap-6 lg:flex-row lg:gap-40 md:flex-row md:gap-20 sm:flex-row sm:gap-8">
           <li>
-            <Link to="/" className={Lankness("Dashboard")}>
+            <Link to="/Home" className={Lankness("Dashboard")}>
               Dashboard
             </Link>
           </li>
@@ -34,7 +36,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/" className={Lankness("Booking")}>
+            <Link to="/Booking" className={Lankness("Booking")}>
               Booking
             </Link>
           </li>
@@ -54,7 +56,7 @@ const Navbar = () => {
             to="/Notification"
             className="text-2xl object-cover cursor-pointer"
           >
-            <i className="bi bi-bell"></i>
+            <IoIosNotificationsOutline />
           </span>
           <div className="flex items-center justify-center p-3">
             <div className="relative inline-block text-left dropdown">
@@ -65,7 +67,7 @@ const Navbar = () => {
                   
                 >
                   <span className="text-2xl">
-                    <i className="bi bi-person-fill"></i>
+                    <CgProfile/>
                   </span>
                 </button>
               </span>
@@ -77,7 +79,7 @@ const Navbar = () => {
                   <div className="py-1">
                     <Link
                       tabIndex="2"
-                      className="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 cursor-pointer"
+                      className="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-black-700 cursor-pointer"
                     >
                       Profile
                     </Link>

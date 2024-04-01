@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { db } from "../../firebase";
 import BookingList from "./BookingList";
-// import {useNavigate} from 'react-router-dom'
+import AddBooking from "./AddBooking";
+
 
 const Booking = () => {
   const [bookings, setBookings] = useState([]);
@@ -43,6 +44,7 @@ const Booking = () => {
   return (
     <>
       <div>
+        <AddBooking/>
         <div>
           <div>
             {bookings &&
@@ -66,6 +68,7 @@ const Booking = () => {
                           {...booking}
                         />
                       )}
+
                     </div>
                   </div>
                 </div>

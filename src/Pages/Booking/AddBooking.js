@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { storage, db } from "../../firebase";
-import { useParams, /* useNavigate */ } from "react-router-dom";
+import { useParams,  useNavigate  } from "react-router-dom";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import {
   addDoc,
@@ -42,7 +42,7 @@ const AddBooking = () => {
   const [progress, setProgress] = useState(null);
   const [errors, setErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const { id } = useParams();
 
   useEffect(() => {
@@ -117,7 +117,7 @@ const AddBooking = () => {
       }
     }
 
-    // navigate("/Booking")
+    navigate("/Booking")
   }; 
 
   return (
