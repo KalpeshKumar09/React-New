@@ -6,11 +6,12 @@ import Home from "../Pages/Home/Home";
 import ProtectedRoute from '../Routes/ProtectedRoute'
 import { UserAuthContextProvider } from "../context/UserAuthContext";
 
+
 const MainRoute = () => {
   return (
     <>
       <UserAuthContextProvider>
-        <Router>
+         <Router>
           <Routes>
             <Route path="/Login" element={<Login />} />
             <Route
@@ -23,7 +24,8 @@ const MainRoute = () => {
             />
             <Route path="/Signup" element={<Signup />} />
           </Routes>
-        </Router>
+        </Router> 
+       
       </UserAuthContextProvider>
     </>
   );

@@ -27,7 +27,7 @@ const Signup = () => {
   };
   return (
     <div className="flex justify-center items-center px-16 py-12 text-lg font-medium whitespace-nowrap bg-white text-zinc-700 max-md:px-5">
-      <div className="flex flex-col items-center px-16 pt-4 pb-12 mt-20 max-w-full bg-white rounded-md shadow-sm w-[846px] max-md:px-5 max-md:mt-10">
+      <div className="flex flex-col items-center px-16 pt-5 pb-12 mt-5 max-w-full bg-white rounded-md shadow-lg w-[846px] max-md:px-5 max-md:mt-10">
         <div className="flex flex-col mb-2 max-w-full w-[550px]">
           <svg
             className="self-center max-w-full aspect-[3.85] w-[213px]"
