@@ -9,6 +9,7 @@ import { UserAuthContextProvider } from "../context/UserAuthContext";
 import Navbar from "../components/Navbar/Navbar";
 import AddBooking from "../Pages/Booking/AddBooking";
 import BookingList from "../Pages/Booking/BookingList";
+import Profile from "../Pages/Profile/Profile";
 
 
 
@@ -31,12 +32,15 @@ const MainRoute = () => {
             <Route path="Booking" element={<ProtectedRoute>
               <Booking/>
             </ProtectedRoute>}/>
-            <Route path="AddBooking" element={<ProtectedRoute>
+            {/* <Route path="AddBooking" element={<ProtectedRoute>
               <AddBooking/>
             </ProtectedRoute>}/>
             <Route path="BookingList" element={<ProtectedRoute>
               <BookingList/>
-            </ProtectedRoute>}/>
+            </ProtectedRoute>}/> */}
+            {/* <Route path="/Profile" element={<ProtectedRoute>
+              <Profile/>
+            </ProtectedRoute>}/> */}
             <Route path="/Signup" element={<Signup />} />
           </Routes>
         </Router> 

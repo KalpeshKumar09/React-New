@@ -5,9 +5,9 @@ import { db } from "../../firebase";
 import BookingList from "./BookingList";
 import AddBooking from "./AddBooking";
 
-
 const Booking = () => {
   const [bookings, setBookings] = useState([]);
+  const [showModel, setShowModel] = useState(false);
   const [booking, setBooking] = useState([]);
   const [open, setOpen] = useState([]);
   const navigate = useNavigate();
@@ -43,34 +43,54 @@ const Booking = () => {
   };
   return (
     <>
-      <div>
-        <AddBooking/>
+      <div className="bg-white h-screen">
+        <div className="flex flex-col">
+          <button
+            className=" place-self-end flex items-center gap-1 bg-gray-800 text-white py-2 px-4 mt-10 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out transform hover:scale-110"
+            onClick={() => setShowModel(true)}
+          >
+            Add User
+          </button>
+          {showModel && <AddBooking onClose={() => setShowModel(false)} />}
+        </div>
         <div>
-          <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {bookings &&
               bookings.map((item) => (
-                <div key={item.id}>
-                  <div>
-                    <div>
-                      <img src={item.img} alt="" />
-                      <div>{item.name}</div>
-                    </div>
-                    <div>
-                      <button onClick={() => navigate(`/update/${item.id}`)}>
-                        Update
-                      </button>
-                      <button onClick={() => handleModel(item)}>View</button>
-                      {open && (
-                        <BookingList
-                          open={open}
-                          setOpen={setOpen}
-                          handleDelete={handleDelete}
-                          {...booking}
-                        />
-                      )}
-
-                    </div>
+                <div
+                  key={item.id}
+                  className="bg-white rounded-lg shadow-md p-4"
+                >
+                  <div className="flex justify-between items-center mb-4">
+                    <img
+                      src={item.profile}
+                      alt=""
+                      className="w-16 h-16 rounded-full"
+                    />
+                    <div className="ml-2 font-bold">{item.name}</div>
                   </div>
+                  <div className="flex justify-between">
+                    {/* <button
+                      onClick={() => navigate(`/update/${item.id}`)}
+                      className="bg-blue-500 text-white px-4 py-2 rounded-md mr-2"
+                    >
+                      Update
+                    </button> */}
+                    <button
+                      onClick={() => handleModel(item)}
+                      className="bg-green-500 text-white px-4 py-2 rounded-md"
+                    >
+                      View
+                    </button>
+                  </div>
+                  {open && (
+                    <BookingList
+                      open={open}
+                      setOpen={setOpen}
+                      handleDelete={handleDelete}
+                      {...booking}
+                    />
+                  )}
                 </div>
               ))}
           </div>

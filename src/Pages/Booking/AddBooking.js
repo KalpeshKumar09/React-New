@@ -3,6 +3,7 @@ import { useState } from "react";
 import { storage, db } from "../../firebase";
 import { useParams, useNavigate } from "react-router-dom";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import { GiTireIronCross } from "react-icons/gi";
 import {
   addDoc,
   collection,
@@ -16,7 +17,7 @@ import {
 const initialState = {
   profile: "",
   name: "",
-  dateAndTime: "",
+  date: "",
   email: "",
   mobileNo: "",
   location: "",
@@ -34,7 +35,7 @@ const initialState = {
   petImages: "",
 };
 
-const AddBooking = () => {
+const AddBooking = ({onClose}) => {
   const navigate = useNavigate();
   const [data, setData] = useState(initialState);
   const {
@@ -42,7 +43,7 @@ const AddBooking = () => {
     name,
     email,
     mobileNo,
-    dateAndTime,
+    date,
     location,
     service,
     address,
@@ -140,13 +141,16 @@ const AddBooking = () => {
 
   return (
     <div className=" w-full h-screen flex  justify-start bg-gray-50 px-4 sm:px-6 lg:px-8 ">
-      <div className=" w-full space-y-8">
+      <div className=" w-full space-y-8 pl-10 pr-10">
+      <button onClick={onClose} className="place-self-end">
+          <GiTireIronCross size={20}/>
+        </button>
         {isSubmit ? (
           <div></div>
         ) : (
           <>
             <div>
-              <h2 className="mt-6 text-center text-3xl font-bold text-violet-900">
+              <h2 className="mt-6 text-center text-2xl font-bold text-violet-900">
                 {id ? "Update Bookings" : "Add Bookings"}
               </h2>
             </div>
@@ -254,7 +258,7 @@ const AddBooking = () => {
                     placeholder=" "
                     required
                     onChange={handleChange}
-                    value={dateAndTime}
+                    value={date}
                   />
                   <label
                     for="date"
@@ -287,8 +291,8 @@ const AddBooking = () => {
                 <div className="relative z-0 w-full mb-5 group">
                   <input
                     type="text"
-                    name="name"
-                    id="name"
+                    name="petName"
+                    id="petName"
                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-violet-500 focus:outline-none focus:ring-0 focus:border-violet-600 peer"
                     placeholder=" "
                     required
@@ -296,7 +300,7 @@ const AddBooking = () => {
                     value={petName}
                   />
                   <label
-                    for="name"
+                    for="petName"
                     className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-violet-600 peer-focus:dark:text-violet-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Pet name
@@ -361,8 +365,8 @@ const AddBooking = () => {
                 <div className="relative z-0 w-full mb-5 group">
                   <input
                     type="text"
-                    name="Special_Needs"
-                    id="Special_Needs"
+                    name="specialNeeds"
+                    id="specialNeeds"
                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-violet-500 focus:outline-none focus:ring-0 focus:border-violet-600 peer"
                     placeholder=" "
                     required
@@ -379,8 +383,8 @@ const AddBooking = () => {
                 <div className="relative z-0 w-full mb-5 group">
                   <input
                     type="text"
-                    name="yearsofexperience"
-                    id="yearsofexperience"
+                    name="yearsOfExperience"
+                    id="yearsOfExperience"
                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-violet-500 focus:outline-none focus:ring-0 focus:border-violet-600 peer"
                     placeholder=" "
                     required
@@ -388,7 +392,7 @@ const AddBooking = () => {
                     value={yearsOfExperience}
                   />
                   <label
-                    for="yearsofexperience"
+                    for="yearsOfExperience"
                     className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-violet-600 peer-focus:dark:text-violet-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Years of Experience
