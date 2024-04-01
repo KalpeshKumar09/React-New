@@ -4,7 +4,10 @@ import Login from "../components/Login/Login";
 import Signup from "../components/Signup/Signup";
 import Home from "../Pages/Home/Home";
 import ProtectedRoute from '../Routes/ProtectedRoute'
+import Booking from "../Pages/Booking/Booking";
 import { UserAuthContextProvider } from "../context/UserAuthContext";
+import Navbar from "../components/Navbar/Navbar";
+
 
 
 const MainRoute = () => {
@@ -12,8 +15,9 @@ const MainRoute = () => {
     <>
       <UserAuthContextProvider>
          <Router>
+          <Navbar/>
           <Routes>
-            <Route path="/Login" element={<Login />} />
+            <Route path="/" element={<Login />} />
             <Route
               path="/Home"
               element={
@@ -22,6 +26,9 @@ const MainRoute = () => {
                 </ProtectedRoute>
               }
             />
+            <Route path="Booking" element={<ProtectedRoute>
+              <Booking/>
+            </ProtectedRoute>}/>
             <Route path="/Signup" element={<Signup />} />
           </Routes>
         </Router> 

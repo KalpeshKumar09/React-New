@@ -17,12 +17,7 @@ const Navbar = () => {
     return classes;
   }
 
-//   const navigate = useNavigate();
-  // Empty dependency array for useEffect
 
-  /* const handleLogout = () => {
-    
-  }; */
 
   return (
     <nav className="flex items-center justify-between px-10">
@@ -67,7 +62,7 @@ const Navbar = () => {
                 <button
                   className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out bg-white rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
                   type="button"
-                  //   onClick={handleLogout} // Uncommented onClick for logout
+                  
                 >
                   <span className="text-2xl">
                     <i className="bi bi-person-fill"></i>
