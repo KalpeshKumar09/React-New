@@ -4,6 +4,8 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
+  RecaptchaVerifier,
+  signInWithEmailLink,
 } from "firebase/auth";
 import { auth } from "../firebase";
 
@@ -16,12 +18,22 @@ export function UserAuthContextProvider({ children }) {
     return createUserWithEmailAndPassword(auth, email, password);
   }
   function logIn(email, password) {
-     console.log("Email", email); 
+    console.log("Email", email);
     return signInWithEmailAndPassword(auth, email, password);
   }
 
   function logOut() {
     return signOut(auth);
+  }
+
+  function setUpRecaptcha(email) {
+    const recaptchaVerifier = new RecaptchaVerifier(
+      auth,
+      "recaptcha-container",
+      {}
+    );
+    recaptchaVerifier.render();
+    return signInWithEmailLink(auth, email, recaptchaVerifier);
   }
 
   useEffect(() => {
@@ -35,7 +47,9 @@ export function UserAuthContextProvider({ children }) {
   }, []);
 
   return (
-    <userAuthContext.Provider value={{ user, signUp, logIn, logOut }}>
+    <userAuthContext.Provider
+      value={{ user, signUp, logIn, logOut, setUpRecaptcha }}
+    >
       {children}
     </userAuthContext.Provider>
   );

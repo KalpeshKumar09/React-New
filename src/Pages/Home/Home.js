@@ -13,15 +13,23 @@ const Home = () => {
     }
   };
   return (
-    <div>
-      <div className="p-4 box mt-3 text-center">
-        hello
-        <br />
-        {user && user.email}
+    <div className="bg-gray-200">
+      <div>
+        <div className="p-4 box mt-3 text-center">
+          hello
+          <br />
+          {user && user.email}
+        </div>
+        <div className="grid gap-2">
+          <button onClick={handleLogout}> log out</button>
+        </div>
       </div>
-      <div className="grid gap-2">
-        <button onClick={handleLogout}> log out</button>
-      </div>
+
+      {/* <section className="parent-section bg-yellow-200">
+        <div className="card flex flex-flex-col lg:flex-row  rounded-lg ">
+          <BookingList />
+        </div>
+      </section> */}
     </div>
   );
 };
