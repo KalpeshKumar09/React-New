@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ContactDataService from "../../service/Contact-Service";
+import ContactDataService from "../../context/Contact-Service";
 
 const Contact = () => {
   const [fullName, setFullName] = useState();
@@ -65,7 +65,7 @@ const Contact = () => {
                 />
               </div>
 
-              <div className="relative">
+              <div className="flex flex-col">
                 <label htmlFor="message">Message</label>
                 <textarea
                   name="message"

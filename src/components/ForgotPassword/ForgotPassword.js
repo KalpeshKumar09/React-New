@@ -29,7 +29,7 @@ const ForgotPassword = () => {
             <p>You'll receive a 5 digit code to verify next...</p>
             <form
               className="flex flex-col gap-4 py-6"
-              onSubmit={forgotPassword}
+              /* onSubmit={forgotPassword} */
             >
               <div className="flex flex-col">
                 <label htmlFor="email">Enter Your Email Address</label>
@@ -46,7 +46,7 @@ const ForgotPassword = () => {
 
               <Link
                 to="/Otp"
-                className="bg-[#545AFA] rounded-xl text-white py-2 hover:scale-105 duration-300"
+                className="bg-[#545AFA] rounded-xl text-white py-2 hover:scale-105 duration-300 text-center"
               >
                 Update Password
               </Link>

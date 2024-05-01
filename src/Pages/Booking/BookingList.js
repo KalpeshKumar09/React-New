@@ -1,79 +1,19 @@
-/* import React from "react";
-
-const BookingList = ({
-  open,
-  setOpen,
-  img,
-  name,
-  email,
-  mobileNo,
-  id,
-  handleDelete,
-}) => {
-  return (
-    <div
-      onClose={() => setOpen(false)}
-      onOpen={() => setOpen(true)}
-      open={open}
-    >
-      <h2>Booking Details</h2>
-      <div>
-        <img src={img} alt="Booking" />
-        <div>
-          <header>{name}</header>
-          <p>{email}</p>
-          <p>{mobileNo}</p>
-        </div>
-      </div>
-      <div>
-        <button
-          className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-          onClick={() => setOpen(false)}
-        >
-          Close
-        </button>
-        <button
-          className="focus:outline-none text-white bg-red-700 hover:bg-blue-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-          onClick={() => handleDelete(id)}
-        >
-          Delete
-        </button>
-      </div>
-    </div>
-  );
-};
-
-export default BookingList;
- */
-
-import { GiTireIronCross } from "react-icons/gi";
 import React from "react";
 
 const BookingList = ({
   open,
   setOpen,
   onClose,
-  img,
   id,
   handleDelete,
-  profile,
-  name,
-  email,
-  mobileNo,
   date,
-  location,
   service,
   address,
   concern,
   additionalDetails,
-  paymentStatus,
   petName,
-  species,
   breed,
   age,
-  specialNeeds,
-  yearsOfExperience,
-  petImages,
 }) => {
   return (
     <div
@@ -100,22 +40,6 @@ const BookingList = ({
         <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
           <div className="flex flex-col w-[31%] max-md:ml-0 max-md:w-full">
             <div className="flex flex-col grow px-16 py-8 w-full bg-white rounded-md shadow-2xl text-zinc-700 max-md:px-5 max-md:mt-4 max-md:max-w-full">
-              <div className="flex gap-2 justify-between items-center mt-4 font-medium whitespace-nowrap">
-                <div className="flex flex-col flex-1 self-start text-2xl font-semibold">
-                  <img
-                    loading="lazy"
-                    src={profile}
-                    className="self-center aspect-square"
-                    width={30}
-                    height={30}
-                  />
-                  <div className="mt-5 ">{name}</div>
-                </div>
-                <div className="grow justify-center text-center mt-36 text-sm text-white bg-green-600 rounded max-md:mt-9">
-                  AMOUNT
-                </div>
-                <div className="grow mt-36 text-sm max-md:mt-10">INR 249</div>
-              </div>
               <div className="mt-7 mr-2.5 text-sm whitespace-nowrap">
                 Booking Number:PETCARE-123456
               </div>
@@ -210,12 +134,7 @@ const BookingList = ({
                         <div className="justify-center items-start py-2 pr-16 pl-2.5 mt-1 text-sm whitespace-nowrap border-b border-solid border-b-slate-200 max-md:pr-5">
                           {breed}
                         </div>
-                        <div className="mt-7 text-zinc-800 text-sm">
-                          Special Needs
-                        </div>
-                        <div className="justify-center px-2.5 py-2 text-sm border-b border-solid border-b-slate-200">
-                          {specialNeeds}
-                        </div>
+                        
                       </div>
                     </div>
                     <div className="flex flex-col ml-5 w-[39%] max-md:ml-0 max-md:w-full">
@@ -228,47 +147,12 @@ const BookingList = ({
                         <div className="justify-center items-start py-2 pr-16 pl-2.5 text-sm border-b border-solid border-b-slate-200 max-md:pr-5">
                           {age}
                         </div>
-                        <div className="mt-8">Years of experience</div>
-                        <div className="justify-center items-start py-2 pr-16 pl-2.5 text-sm border-b border-solid border-b-slate-200 max-md:pr-5">
-                          {yearsOfExperience}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-10 mb-1.5 max-w-full w-[840px]">
-                  <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
-                    <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
-                      <div className="flex flex-col grow text-sm font-medium text-zinc-700 max-md:mt-8">
-                        <div>Pet Images</div>
-                        <div className="shrink-0 mt-2.5 h-24 border-2 border-dashed border-zinc-200" />
-                      </div>
-                    </div>
-                    <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                      <img
-                        className="mx-auto mt-6 h-24 border-2 border-dashed border-zinc-200 w-[186px] max-md:mt-10"
-                        src={petImages}
-                      />
-                    </div>
-                    <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                      <div className="mx-auto mt-6 h-24 border-2 border-dashed border-zinc-200 w-[186px] max-md:mt-10" />
-                    </div>
-                    <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                      <div className="mx-auto mt-6 h-24 border-2 border-dashed border-zinc-200 w-[186px] max-md:mt-10" />
+                        
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-start  py-4 pr-10 pl-6 mt-3.5 text-base font-semibold bg-white rounded-md shadow-2xl max-md:px-5 max-md:max-w-full">
-          <div className="text-yellow-500 max-md:max-w-full">
-            Special Instructions
-          </div>
-          <div className="mt-4 text-zinc-700 max-md:max-w-full">
-            Whiskers is timid and prefers quiet environments. He's indoor-only
-            and uses a litter box in the laundry room.
           </div>
         </div>
       </div>

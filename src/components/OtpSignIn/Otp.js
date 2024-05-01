@@ -22,8 +22,8 @@ const Otp = () => {
   };
 
   return (
-    <section className="bg-gray-50 min-h-screen flex items-center justify-center flex-col  ">
-      <div className="flex flex-col justify-center items-center shadow-lg border-2 border-white py-4 px-8">
+    <section className="bg-gray-200 min-h-screen flex items-center justify-center flex-col  ">
+      <div className="bg-white flex flex-col justify-center items-center shadow-xl rounded-lg border-2 border-white py-4 px-8">
         <div className=" flex  max-w-3xl p-4 items-center lg:flex lg:flex-row md:flex md:flex-row min-[360px]:flex min-[360px]:flex-col rounded-2xl ">
           <div className="w-1/2">
             <img

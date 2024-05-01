@@ -24,8 +24,8 @@ const Report = () => {
     setMessage("");
   };
   return (
-    <section className="bg-gray-50 min-h-screen flex items-center justify-center flex-col">
-      <div className="flex flex-col justify-center items-center shadow-lg  bg-[#E5E8F2] ">
+    <section className="bg-gray-200 min-h-screen flex  justify-center  p-5">
+      <div className="flex flex-col justify-center items-center shadow-lg  bg-[#E5E8F2] w-screen">
         <h1 className="text-[22px] font-medium mt-2 text-center">
           Report An Issue
         </h1>
@@ -50,7 +50,7 @@ const Report = () => {
                   onChange={(e) => setReport(e.target.value)}
                 />
               </div>
-              <div className="relative">
+              <div className="flex flex-col">
                 <label htmlFor="message">
                   A Brief Description of The Problem
                 </label>

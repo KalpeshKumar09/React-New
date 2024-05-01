@@ -1,97 +1,10 @@
-/* import "./navbar.css";
-import { Link, useLocation, NavLink } from "react-router-dom";
-import { IoIosNotificationsOutline } from "react-icons/io";
-import { CgProfile } from "react-icons/cg";
-
-const Navbar = () => {
-  let { pathname } = useLocation();
-  let subbase = pathname.split("/")?.[1] || "Dashboard";
-
-  function Lankness(type = null) {
-    let classes = "px-4 py-4 rounded inline-flex ";
-
-    if (type === subbase) {
-      classes += "bg-red text-white no-underline";
-    } else {
-      classes += "";
-    }
-
-    return classes;
-  }
-
-  return (
-    <nav className="flex items-center justify-between px-0 h-20">
-      <div className="absolute top-0 left-0 w-full flex flex-col gap-6 shadow-md items-center text-lg lg:static lg:flex-row lg:justify-between md:flex-row md:justify-between sm:flex-row sm:justify-between">
-        <ul className="flex flex-col items-center gap-6 lg:flex-row lg:gap-40 md:flex-row md:gap-20 sm:flex-row sm:gap-8">
-          <li>
-            <Link to="/Home" className={Lankness("Home")}>
-              Dashboard
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/Booking" className={Lankness("Booking")}>
-              Booking
-            </Link>
-          </li>
-        </ul>
-
-        <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-8 md:flex-row md:gap-8 sm:flex-row sm:gap-8">
-          <span
-            to="/Notification"
-            className="text-2xl object-cover cursor-pointer"
-          >
-            <IoIosNotificationsOutline />
-          </span>
-          <div className="flex items-center justify-center p-3">
-            <div className="relative inline-block text-left dropdown">
-              <span className="rounded-md shadow-lg">
-                <button
-                  className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out bg-white rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
-                  type="button"
-                >
-                  <span className="text-2xl">
-                    <CgProfile />
-                  </span>
-                </button>
-              </span>
-              <div className="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
-                <div
-                  className="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
-                  role="menu"
-                >
-                  <div className="py-1">
-                    <Link
-                      tabIndex="2"
-                      className="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-black-700 cursor-pointer"
-                    >
-                      Profile
-                    </Link>
-                    <Link
-                      tabIndex="2"
-                      className="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left cursor-pointer"
-                    >
-                      Logout
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
- */
 /** @format */
 /* "use client"; */
 
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useUserAuth } from "../../context/UserAuthContext";
 
 import { FiMenu } from "react-icons/fi";
 import { IoCloseOutline } from "react-icons/io5";
@@ -99,16 +12,25 @@ import clsx from "clsx";
 import "./navbar.css";
 
 export default function Navbar1() {
+  const { logOut } = useUserAuth();
+
+  const handleLogout = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
   const [isSideMenuOpen, setMenu] = useState(false);
 
   let { pathname } = useLocation();
   let subbase = pathname.split("/")?.[1] || "Dashboard";
 
   function Lankness(type = null) {
-    let classes = "hidden lg:block text-gray-400 hover:text-black";
+    let classes = "hidden lg:block text-gray-400 hover:text-black opacity-0";
 
     if (type === subbase) {
-      classes += "bg-red text-white no-underline";
+      classes += "bg-red text-white no-underline ";
     } else {
       classes += "";
     }
@@ -118,7 +40,7 @@ export default function Navbar1() {
 
   return (
     <main>
-      <nav className="flex justify-between px-8 items-center py-6">
+      <nav className="flex justify-between px-8 items-center py-4">
         <div className="flex items-center gap-20">
           <section className="flex items-center gap-4">
             {/* menu */}
@@ -127,10 +49,10 @@ export default function Navbar1() {
               className="text-3xl cursor-pointer lg:hidden"
             />
           </section>
-          <Link to="/Home" className={Lankness("Home")}>
+          <Link to="/" className={Lankness("Home")}>
             Dashboard
           </Link>
-          <Link to="/Booking" className={Lankness("Bookings")}>
+          <Link to="/" className={Lankness("Bookings")}>
             Bookings
           </Link>
           <Link className={Lankness("Contact")}>Contact</Link>
@@ -145,24 +67,32 @@ export default function Navbar1() {
           )}
         >
           <section className="text-black bg-white flex-col absolute left-0 top-0 h-screen gap-8 z-50 w-56 flex">
-            <div className="p-3">
+            <div className="p-3 ">
               <IoCloseOutline
                 onClick={() => setMenu(false)}
                 className="mt-0 mb-8 text-3xl cursor-pointer"
               />
             </div>
 
-            <div className="border-b-2 border-gray-300 flex flex-col justify-center items-start gap-5 p-4">
+            <div className="border-b-2 border-gray-300 flex flex-col justify-center items-start gap-5 p-4 ml-4">
               <Link className="font-bold">Settings</Link>
-              <Link to="/" className="font-bold">
+              <Link to="/Contact" className="font-bold">
                 Contact Us
               </Link>
-              <Link className="font-bold">Report An Issue</Link>
-              <Link className="font-bold">Privacy Policy</Link>
-              <Link className="font-bold ">T&C</Link>
+              <Link className="font-bold" to="/Report">
+                Report An Issue
+              </Link>
+              <Link className="font-bold" to="/Privacy">
+                Privacy Policy
+              </Link>
+              <Link className="font-bold" to="/Terms">
+                T&C
+              </Link>
             </div>
-            <div className="p-4">
-              <Link className="font-bold">LogOut</Link>
+            <div className="p-4 ml-4">
+              <Link className="font-bold" onClick={handleLogout}>
+                LogOut
+              </Link>
             </div>
           </section>
         </div>

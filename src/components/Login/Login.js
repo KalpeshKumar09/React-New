@@ -24,8 +24,8 @@ const Login = () => {
     }
   };
   return (
-    <section class="bg-gray-50 min-h-screen flex items-center justify-center flex-col  ">
-      <div className="flex flex-col justify-center items-center shadow-lg border-2 border-white py-4 px-8">
+    <section class="bg-gray-200 min-h-screen flex items-center justify-center flex-col  ">
+      <div className="bg-white flex flex-col justify-center items-center rounded-lg shadow-xl border-2 border-white py-4 px-8">
         <div class=" flex  max-w-3xl p-4 items-center lg:flex lg:flex-row md:flex md:flex-row min-[360px]:flex min-[360px]:flex-col rounded-2xl ">
           <div class="w-1/2">
             <img class="rounded-2xl sm:block visible" src={Images} alt="logo" />
@@ -45,7 +45,7 @@ const Login = () => {
                   required
                 />
               </div>
-              <div class="relative">
+              <div class="flex flex-col">
                 <label htmlFor="password">Password</label>
                 <input
                   class="p-2 mt-1 rounded-xl border w-full bg-[#E5E8F2]"
@@ -57,7 +57,10 @@ const Login = () => {
               </div>
 
               <div class=" text-xs #002D74] py-4 text-[#002D74]">
-                <Link className="text-[14px] font-semibold">
+                <Link
+                  to="/ForgotPassword"
+                  className="text-[14px] font-semibold"
+                >
                   Forgot your password?
                 </Link>
               </div>
