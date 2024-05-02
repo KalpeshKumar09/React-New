@@ -78,6 +78,7 @@ const MainRoute = () => {
             /> */}
           </Routes>
         </Router>
+        <Nav />
       </UserAuthContextProvider>
     </>
   );

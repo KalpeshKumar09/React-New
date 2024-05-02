@@ -11,7 +11,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import clsx from "clsx";
 import "./navbar.css";
 
-export default function Navbar1() {
+export default function Navbar() {
   const { logOut } = useUserAuth();
 
   const handleLogout = async () => {
