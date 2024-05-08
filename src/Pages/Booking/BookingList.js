@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 
 const BookingList = ({
   open,
@@ -161,3 +161,4 @@ const BookingList = ({
 };
 
 export default BookingList;
+ */

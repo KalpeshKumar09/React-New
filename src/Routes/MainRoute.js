@@ -7,10 +7,10 @@ import ProtectedRoute from "../Routes/ProtectedRoute";
 import OtpSignIn from "../components/OtpSignIn/OtpSignIn";
 import Otp from "../components/OtpSignIn/Otp";
 import ForgotPassword from "../components/ForgotPassword/ForgotPassword";
-import AddBooking from "../Pages/Booking/AddBooking";
-import Booking from "../Pages/Booking/Booking";
+// import AddBooking from "../Pages/Booking/AddBooking";
+// import Booking from "../Pages/Booking/Booking";
 import Navbar from "../components/Navbar/Navbar";
-import Nav from "../components/BNavbar/Nav";
+import BNav from "../components/BNavbar/BNav";
 import Contact from "../Pages/Contact/Contact";
 import Report from "../Pages/Report/Report";
 import Privacy from "../Pages/Additional/Privacy";
@@ -78,7 +78,7 @@ const MainRoute = () => {
             /> */}
           </Routes>
         </Router>
-        <Nav />
+        {/*   <BNav /> */}
       </UserAuthContextProvider>
     </>
   );

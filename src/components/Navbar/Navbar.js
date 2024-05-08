@@ -49,10 +49,10 @@ export default function Navbar() {
               className="text-3xl cursor-pointer lg:hidden"
             />
           </section>
-          <Link to="/" className={Lankness("Home")}>
+          <Link to="" className={Lankness("Home")}>
             Dashboard
           </Link>
-          <Link to="/" className={Lankness("Bookings")}>
+          <Link to="" className={Lankness("Bookings")}>
             Bookings
           </Link>
           <Link className={Lankness("Contact")}>Contact</Link>
