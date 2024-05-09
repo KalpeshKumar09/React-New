@@ -2,21 +2,21 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="bg-gray-200">
-      <div className="flex flex-col items-center  bg-white max-w-screen">
-        <div>
-          <button className=" flex flex-col justify-center items-center p-1 mt-20  text-base font-medium rounded-md bg-black text-white min-[360px]:w-78 md:w-60 px-20 ">
+    <div className="bg-gray-200 flex flex-col justify-center">
+      <div className="flex flex-col items-center  bg-white max-w-screen gap-4">
+        <div className="">
+          <button className=" flex flex-col justify-center items-center p-2 mt-20  text-base font-medium rounded-md bg-black text-white min-[360px]:w-80 md:w-80 px-20 h-12">
             Go Online
             <label class="inline-flex items-center cursor-pointer">
               <input type="checkbox" value="" class="sr-only peer" />
-              <div class="relative w-11 h-6 bg-yellow-400 peer-focus:outline-none peer-focus:ring-4   rounded-full peer dark:bg-[#E5E8F2] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              <div class=" w-11 h-6 bg-yellow-400 peer-focus:outline-none peer-focus:ring-4   rounded-full peer dark:bg-[#E5E8F2] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full  after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white  after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-blue-600"></div>
             </label>
           </button>
         </div>
         <div className="flex gap-5 justify-between w-full text-sm max-w-screen text-neutral-800">
           <div className="w-full flex flex-col">
             <div className="flex flex-row justify-between px-20 w-full p-4">
-              <div className=" font-medium">Upcoming Bookings</div>
+              <div className=" font-bold">Upcoming Bookings</div>
               <div className="">View All</div>
             </div>
 
@@ -34,7 +34,7 @@ const Home = () => {
                     Tuesday, March 30, 2024, 10:00 AM
                   </div>
                 </div>
-                <div className="bg-[#E5E8F2] md:bg-transparent">
+                <div className="bg-[#E5E8F2] md:bg-transparent p-1">
                   <div className="text-sm text-zinc-700">
                     456 Anytown Lane, Anytown,
                     <br />

@@ -3,7 +3,6 @@
 
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
 import { useUserAuth } from "../../context/UserAuthContext";
 
 import { FiMenu } from "react-icons/fi";
@@ -23,21 +22,6 @@ export default function Navbar() {
   };
   const [isSideMenuOpen, setMenu] = useState(false);
 
-  let { pathname } = useLocation();
-  let subbase = pathname.split("/")?.[1] || "Dashboard";
-
-  function Lankness(type = null) {
-    let classes = "hidden lg:block text-gray-400 hover:text-black opacity-0";
-
-    if (type === subbase) {
-      classes += "bg-red text-white no-underline ";
-    } else {
-      classes += "";
-    }
-
-    return classes;
-  }
-
   return (
     <main>
       <nav className="flex justify-between px-8 items-center py-4">
@@ -49,14 +33,14 @@ export default function Navbar() {
               className="text-3xl cursor-pointer lg:hidden"
             />
           </section>
-          <Link to="" className={Lankness("Home")}>
+          <Link to="" className="opacity-0">
             Dashboard
           </Link>
-          <Link to="" className={Lankness("Bookings")}>
+          <Link to="" className="opacity-0">
             Bookings
           </Link>
-          <Link className={Lankness("Contact")}>Contact</Link>
-          <Link className={Lankness("About")}>About</Link>
+          <Link className="opacity-0">Contact</Link>
+          <Link className="opacity-0">About</Link>
         </div>
 
         {/* sidebar mobile menu */}
@@ -66,12 +50,51 @@ export default function Navbar() {
             isSideMenuOpen && "translate-x-0"
           )}
         >
-          <section className="text-black bg-white flex-col absolute left-0 top-0 h-screen gap-8 z-50 w-56 flex">
+          <section className="text-black bg-white flex-col absolute left-0 top-0 h-screen gap-4 z-50 w-64 flex overflow-hidden">
             <div className="p-3 ">
               <IoCloseOutline
                 onClick={() => setMenu(false)}
                 className="mt-0 mb-8 text-3xl cursor-pointer"
               />
+            </div>
+
+            <div className="p-3 flex flex-row justify-start gap-2 border-b-2 border-gray-300">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_2_32)">
+                  <path
+                    d="M32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64Z"
+                    fill="#E8EBF3"
+                  />
+                  <path
+                    d="M32 29.091C36.2843 29.091 39.7576 25.6177 39.7576 21.3334C39.7576 17.049 36.2843 13.5758 32 13.5758C27.7157 13.5758 24.2424 17.049 24.2424 21.3334C24.2424 25.6177 27.7157 29.091 32 29.091Z"
+                    fill="#6C63FF"
+                    stroke="#6C63FF"
+                    stroke-width="1.27273"
+                  />
+                  <path
+                    d="M18.9416 53.3334H45.0793C48.6846 53.3334 50.4242 52.3028 50.4242 50.07C50.4242 44.8412 43.2558 37.8182 32 37.8182C20.7441 37.8182 13.5757 44.8412 13.5757 50.07C13.5757 52.3028 15.3155 53.3334 18.9416 53.3334Z"
+                    fill="#6C63FF"
+                    stroke="#6C63FF"
+                    stroke-width="1.27273"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2_32">
+                    <rect width="64" height="64" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <div className="flex flex-col">
+                <h4 className="text-[12px]">Kalpesh Kumar</h4>
+                <p className="text-[12px]">sutharkalpesh101@gmail.com</p>
+              </div>
             </div>
 
             <div className="border-b-2 border-gray-300 flex flex-col justify-center items-start gap-5 p-4 ml-4">
@@ -114,7 +137,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center justify-center">
-            <div className="relative inline-block text-left dropdown">
+            <div className=" inline-block text-left dropdown">
               <span className="">
                 <button
                   className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out  rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"

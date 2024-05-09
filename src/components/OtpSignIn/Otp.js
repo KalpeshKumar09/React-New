@@ -22,36 +22,75 @@ const Otp = () => {
   };
 
   return (
-    <section className="bg-gray-200 min-h-screen flex items-center justify-center flex-col  ">
-      <div className="bg-white flex flex-col justify-center items-center shadow-xl rounded-lg border-2 border-white py-4 px-8">
-        <div className=" flex  max-w-3xl p-4 items-center lg:flex lg:flex-row md:flex md:flex-row min-[360px]:flex min-[360px]:flex-col rounded-2xl ">
-          <div className="w-1/2">
+    <section className="bg-gray-300 min-h-screen flex items-center justify-center flex-col py-2 px-2 overflow-hidden ">
+      <div className="bg-white flex flex-col justify-center items-center shadow-xl rounded-lg border-2 border-white">
+        <div className=" flex  max-w-3xl p-1 items-center lg:flex lg:flex-row md:flex md:flex-row min-[360px]:flex min-[360px]:flex-col rounded-2xl ">
+          <div className="max-w-xl">
             <img
               className="rounded-2xl sm:block visible"
               src={Images}
               alt="logo"
             />
           </div>
-          <div className="md:w-1/2 px-8 md:px-16 flex flex-col justify-center items-center">
-            <h2 className="font-medium text-2xl text-[#002D74]">
+          <div className="max-w-2xl flex flex-col justify-center items-center">
+            <h2 className="font-bold text-3xl text-black px-10 text-center">
               Hey, We've Sent You An Email With Your Code
             </h2>
-            <p>Enter the code which has been send to contact@poodles.in</p>
+            <p className="text-center">
+              Enter the code which has been send to contact@poodles.in
+            </p>
             <form className="flex flex-col gap-4 py-6" onSubmit={verifyOtp}>
               <div className="flex flex-col">
                 <label htmlFor="otp">Enter Your Email Address</label>
-                <input
-                  className="p-2 mt-1 rounded-xl border bg-[#E5E8F2]"
-                  type="text"
-                  name="otp"
-                  onChange={(e) => setOtp(e.target.value)}
-                  required
-                />
+                <div className="flex flex-row gap-3">
+                  <input
+                    className="p-2 mt-1 rounded-md border-1 border-black bg-white h-14 w-10 text-[16px]"
+                    type="text"
+                    name="otp"
+                    onChange={(e) => setOtp(e.target.value)}
+                    required
+                    maxlength="1"
+                  />
+                  <input
+                    className="p-2 mt-1 rounded-md border-1 border-black bg-white h-14 w-10 text-[16px]"
+                    type="text"
+                    name="otp"
+                    onChange={(e) => setOtp(e.target.value)}
+                    required
+                    maxlength="1"
+                  />
+                  <input
+                    className="p-2 mt-1 rounded-md border-1 border-black bg-white h-14 w-10 text-[16px]"
+                    type="text"
+                    name="otp"
+                    onChange={(e) => setOtp(e.target.value)}
+                    required
+                    maxlength="1"
+                  />
+                  <input
+                    className="p-2 mt-1 rounded-md border-1 border-black bg-white h-14 w-10 text-[16px]"
+                    type="text"
+                    name="otp"
+                    onChange={(e) => setOtp(e.target.value)}
+                    required
+                    maxlength="1"
+                  />
+                  <input
+                    className="p-2 mt-1 rounded-md border-1 border-black bg-white h-14 w-10 text-[16px]"
+                    type="text"
+                    name="otp"
+                    onChange={(e) => setOtp(e.target.value)}
+                    required
+                    maxlength="1"
+                  />
+                </div>
               </div>
 
-              <button className="bg-[#545AFA] rounded-xl text-white py-2 hover:scale-105 duration-300">
-                Verify
-              </button>
+              <div>
+                <button className="bg-[#545AFA] rounded-md text-white py-2 hover:scale-105 duration-300 w-full h-12 text-lg">
+                  Verify
+                </button>
+              </div>
             </form>
           </div>
         </div>
