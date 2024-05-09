@@ -25,7 +25,7 @@ const Login = () => {
   };
   return (
     <section className="bg-gray-300 min-h-screen flex items-center justify-center flex-col  py-2 px-2  overflow-hidden">
-      <div className="bg-white flex flex-col justify-center items-center rounded-lg shadow-xl border-2 border-white">
+      <div className="bg-white flex flex-col justify-center items-center rounded-lg shadow-xl border-2 border-white p-4">
         <div className=" flex  max-w-3xl p-1 items-center lg:flex lg:flex-row md:flex md:flex-row min-[360px]:flex min-[360px]:flex-col rounded-2xl ">
           <div className="max-w-xl">
             <img
@@ -89,13 +89,13 @@ const Login = () => {
               </Link>
             </div>
           </div>
-        </div>
-        <div className=" text-center flex justify-center items-center text-[#002D74]">
-          <p className=" px-1 hover:scale-110 duration-300 md:px-5 sm:px-10 text-[14px]">
-            By Logging In, I agree with Poodles's Terms of Services and Privacy
-            Policy, I agree to receive transactional text messages and I can
-            opt-out at any time
-          </p>
+          <div className=" text-center flex justify-center items-center text-black">
+            <p className=" px-1 hover:scale-110 duration-300 md:px-5 sm:px-10 text-[14px]">
+              By Logging In, I agree with Poodles's Terms of Services and
+              Privacy Policy, I agree to receive transactional text messages and
+              I can opt-out at any time
+            </p>
+          </div>
         </div>
       </div>
     </section>

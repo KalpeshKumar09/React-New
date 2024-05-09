@@ -26,7 +26,7 @@ const OtpSignIn = ({ setConfirmObj }) => {
 
   return (
     <section className="bg-gray-300 min-h-screen flex items-center justify-center flex-col py-2 px-2  overflow-hidden">
-      <div className="bg-white flex flex-col justify-center items-center  rounded-lg shadow-xl border-2 border-white ">
+      <div className="bg-white flex flex-col justify-center items-center  rounded-lg shadow-xl border-2 border-white p-4">
         <div className=" flex  max-w-3xl p-2 items-center lg:flex lg:flex-row md:flex md:flex-row min-[360px]:flex min-[360px]:flex-col rounded-2xl ">
           <div className="max-w-xl">
             <img

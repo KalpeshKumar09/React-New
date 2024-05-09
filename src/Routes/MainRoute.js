@@ -15,6 +15,7 @@ import AddProfile from "../Pages/Profile/AddProfile";
 import Profile from "../Pages/Profile/Profile";
 import Setting from "../Pages/Setting/Setting";
 import Navbar from "../components/Navbar/Navbar";
+import VerifyEmail from "../components/ForgotPassword/VerifyEmail";
 
 const MainRoute = () => {
   return (
@@ -34,6 +35,7 @@ const MainRoute = () => {
             <Route path="/AddProfile" element={<AddProfile />} />
             <Route path="/Profile" element={<Profile />} />
             <Route path="/Setting" element={<Setting />} />
+            <Route path="/VerifyEmail" element={<VerifyEmail />} />
             <Route
               path="/Privacy"
               element={
