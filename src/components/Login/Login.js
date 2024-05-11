@@ -89,13 +89,13 @@ const Login = () => {
               </Link>
             </div>
           </div>
-          <div className=" text-center flex justify-center items-center text-black">
-            <p className=" px-1 hover:scale-110 duration-300 md:px-5 sm:px-10 text-[14px]">
-              By Logging In, I agree with Poodles's Terms of Services and
-              Privacy Policy, I agree to receive transactional text messages and
-              I can opt-out at any time
-            </p>
-          </div>
+        </div>
+        <div className=" text-center flex justify-center items-center text-black">
+          <p className=" px-1 hover:scale-110 duration-300 md:px-5 sm:px-10 text-[14px]">
+            By Logging In, I agree with Poodles's Terms of Services and Privacy
+            Policy, I agree to receive transactional text messages and I can
+            opt-out at any time
+          </p>
         </div>
       </div>
     </section>
