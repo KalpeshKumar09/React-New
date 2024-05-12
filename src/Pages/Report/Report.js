@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ReportDataService from "../../context/Report-Service";
 
 const Report = () => {
   const [report, setReport] = useState();
@@ -7,21 +6,7 @@ const Report = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const newReport = {
-      report,
-      message,
-    };
-
-    try {
-      await ReportDataService.addReports(newReport);
-      alert("report added");
-    } catch (error) {
-      console.log(error);
-    }
-
-    setReport("");
-    setMessage("");
+    console.log("Details : " + report + message);
   };
   return (
     <section className="bg-white min-h-screen flex  justify-center py-2 px-2 overflow-hidden">

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ContactDataService from "../../context/Contact-Service";
 
 const Contact = () => {
   const [fullName, setFullName] = useState();
@@ -8,23 +7,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    /* const newContact = {
-      fullName,
-      email,
-      message,
-    };
-
-    try {
-      await ContactDataService.addContacts(newContact);
-      alert("contact added");
-    } catch (error) {
-      console.log(error);
-    }
-
-    setFullName("");
-    setEmail("");
-    setMessage(""); */
     console.log("Details : " + fullName + email + message);
   };
 

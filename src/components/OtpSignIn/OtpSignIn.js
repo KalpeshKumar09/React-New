@@ -1,27 +1,16 @@
 import React, { useState } from "react";
 import Images from "../Images/262d36ab-e1e2-4075-9825-fe6332071f2e.png";
-import { Link } from "react-router-dom";
-import { useUserAuth } from "../../context/UserAuthContext";
+import { Link, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
-const OtpSignIn = ({ setConfirmObj }) => {
+const OtpSignIn = () => {
   const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
-  const { setUpRecaptcha } = useUserAuth();
+  const navigate = useNavigate();
 
-  const getOtp = async (e) => {
+  const getOtp = (e) => {
     e.preventDefault();
-    setError("");
-    if (email === "" || email === undefined) {
-      return setError("Please enter a valid email!");
-    }
-    try {
-      const response = await setUpRecaptcha(email);
-      console.log(response);
-      setConfirmObj(response);
-    } catch (error) {
-      setError(error);
-    }
     console.log(email);
+    navigate("/Otp");
   };
 
   return (

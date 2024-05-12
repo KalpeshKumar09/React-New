@@ -1,6 +1,6 @@
 import React from "react";
 
-const AddProfile = ({ onClose }) => {
+const AddProfile = () => {
   return (
     <section className="bg-white  flex justify-center  py-2 px-2 overflow-hidden">
       <div className="flex flex-col items-center shadow-lg rounded-lg  bg-[#E5E8F2] w-screen">

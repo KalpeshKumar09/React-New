@@ -23,7 +23,7 @@ const WithDrawFunds = () => {
         <div className="shrink-0 mt-3.5 rounded-md bg-zinc-300 h-[37px]" />
         <h4 className="mt-3.5 text-sm font-medium">Ifsc Code</h4>
         <div className="shrink-0 mt-3.5 rounded-md bg-zinc-300 h-[37px]" />
-        <div className="flex flex-col justify-center self-center px-9 py-2.5 mt-6 max-w-full text-sm font-medium rounded-xl bg-zinc-300 w-[184px]">
+        <button className="flex flex-col justify-center self-center px-9 py-2.5 mt-6 max-w-full text-sm font-medium rounded-xl bg-zinc-300 w-[184px]">
           <svg
             width="26"
             height="27"
@@ -38,7 +38,7 @@ const WithDrawFunds = () => {
           </svg>
 
           <h4>Request Payout</h4>
-        </div>
+        </button>
       </div>
     </div>
   );

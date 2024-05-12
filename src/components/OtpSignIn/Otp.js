@@ -4,21 +4,10 @@ import { Navigate } from "react-router-dom";
 
 const Otp = () => {
   const [otp, setOtp] = useState("");
-  const [confirmObj, setConfirmObj] = useState("");
 
   const verifyOtp = async (e) => {
     e.preventDefault();
     console.log(otp);
-    if (otp === "" || otp === null) {
-      return;
-    }
-
-    try {
-      await confirmObj.confirm(otp);
-      Navigate("/Home");
-    } catch (error) {
-      console.log(error);
-    }
   };
 
   return (
