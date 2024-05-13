@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Images from "../Images/262d36ab-e1e2-4075-9825-fe6332071f2e.png";
 
@@ -25,9 +25,7 @@ const Login = () => {
             <h2 className="font-bold text-xl text-black px-10 text-center">
               Hey, Welcome Back To Continue!
             </h2>
-            <form
-              className="flex flex-col gap-2 py-2" /* onSubmit={handleSubmit} */
-            >
+            <form className="flex flex-col gap-2 py-2" onSubmit={handleSubmit}>
               <div className="flex flex-col">
                 <label htmlFor="email" className="text-lg">
                   Email
@@ -64,7 +62,7 @@ const Login = () => {
 
               <div className="flex  justify-center">
                 <button
-                  onClick={handleSubmit}
+                  /* onClick={handleSubmit} */
                   className="bg-[#545AFA] rounded-md text-white py-2 hover:scale-105 duration-300 w-44 h-14 text-lg"
                 >
                   Sign In
