@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "../components/Navbar/Navbar";
 import Login from "../components/Login/Login";
 import Home from "../Pages/Home/Home";
-import Navbar from "../components/Navbar/Navbar";
 import BNav from "../components/BNavbar/BNav";
 import ChangePassword from "../components/ForgotPassword/ChangePassword";
 import ForgotPassword from "../components/ForgotPassword/ForgotPassword";
