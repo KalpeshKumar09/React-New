@@ -1,8 +1,16 @@
 import React from "react";
 import Images from "../Images/88352552-27fd-406f-86d1-b1d6ca9c1650.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const VerifyEmail = () => {
+  const navigate = useNavigate();
+
+  const getOtp = (e) => {
+    e.preventDefault();
+
+    navigate("/VerifyOtp");
+  };
+
   return (
     <section className="bg-gray-300 min-h-screen flex items-center justify-center flex-col py-2 px-2  overflow-hidden">
       <div className="bg-white flex flex-col justify-center items-center  rounded-lg shadow-xl border-2 border-white p-4">
@@ -21,7 +29,7 @@ const VerifyEmail = () => {
               </h2>
             </div>
             <p className="text-left">Please verify your email to continue</p>
-            <form className="flex flex-col gap-4 py-2" /* onSubmit={getOtp} */>
+            <form className="flex flex-col gap-4 py-2" onSubmit={getOtp}>
               <div className="flex flex-col">
                 <label htmlFor="email" className="text-lg">
                   Enter Your Email Address

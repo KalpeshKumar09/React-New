@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Images from "../Images/262d36ab-e1e2-4075-9825-fe6332071f2e.png";
 import { Link, useNavigate } from "react-router-dom";
-import { Navigate } from "react-router-dom";
 
 const OtpSignIn = () => {
   const [email, setEmail] = useState("");

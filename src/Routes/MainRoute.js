@@ -16,6 +16,7 @@ import Terms from "../Pages/Additional/Terms";
 import Booking from "../Pages/Booking/Booking";
 import BookingDetails from "../Pages/Booking/BookingDetails";
 import BookingOtp from "../Pages/Booking/BookingOtp";
+import BookingDetailsComplete from "../Pages/Booking/BookingDetailsComplete";
 import Contact from "../Pages/Contact/Contact";
 import AddProfile from "../Pages/Profile/AddProfile";
 import Profile from "../Pages/Profile/Profile";
@@ -24,6 +25,8 @@ import Setting from "../Pages/Setting/Setting";
 import Wallet from "../Pages/Wallet/Wallet";
 import WalletDrawFund from "../Pages/Wallet/WithDrawFunds";
 import WalletDrawFundScreen from "../Pages/Wallet/WithDrawFundsScreen";
+import PublicRoute from "../Routes/PublicRoute";
+import ProtectedRoute from "../Routes/ProtectedRoute";
 
 const MainRoute = () => {
   return (
@@ -31,32 +34,40 @@ const MainRoute = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/ChangePassword" element={<ChangePassword />} />
-          <Route path="/ForgotPassword" element={<ForgotPassword />} />
-          <Route path="/UpdatedPassword" element={<UpdatedPassword />} />
-          <Route path="/VerifyEmail" element={<VerifyEmail />} />
-          <Route path="/VerifyOtp" element={<VerifyOtp />} />
-          <Route path="/Otp" element={<Otp />} />
-          <Route path="/OtpSignIn" element={<OtpSignIn />} />
+          <Route element={<PublicRoute />}>
+            <Route path="/" element={<Login />} />
+            <Route path="/ChangePassword" element={<ChangePassword />} />
+            <Route path="/ForgotPassword" element={<ForgotPassword />} />
+            <Route path="/UpdatedPassword" element={<UpdatedPassword />} />
+            <Route path="/VerifyEmail" element={<VerifyEmail />} />
+            <Route path="/VerifyOtp" element={<VerifyOtp />} />
+            <Route path="/Otp" element={<Otp />} />
+            <Route path="/OtpSignIn" element={<OtpSignIn />} />
+          </Route>
 
-          <Route path="/Home" element={<Home />} />
-          <Route path="/Privacy" element={<Privacy />} />
-          <Route path="/Terms" element={<Terms />} />
-          <Route path="/Booking" element={<Booking />} />
-          <Route path="/BookingDetails" element={<BookingDetails />} />
-          <Route path="/BookingOtp" element={<BookingOtp />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/AddProfile" element={<AddProfile />} />
-          <Route path="/Profile" element={<Profile />} />
-          <Route path="/Report" element={<Report />} />
-          <Route path="/Setting" element={<Setting />} />
-          <Route path="/Wallet" element={<Wallet />} />
-          <Route path="/WalletDrawFund" element={<WalletDrawFund />} />
-          <Route
-            path="/WalletDrawFundScreen"
-            element={<WalletDrawFundScreen />}
-          />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/Home" element={<Home />} />
+            <Route path="/Privacy" element={<Privacy />} />
+            <Route path="/Terms" element={<Terms />} />
+            <Route path="/Booking" element={<Booking />} />
+            <Route path="/BookingDetails" element={<BookingDetails />} />
+            <Route path="/BookingOtp" element={<BookingOtp />} />
+            <Route
+              path="/BookingDetailsCOmplete"
+              element={<BookingDetailsComplete />}
+            />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/AddProfile" element={<AddProfile />} />
+            <Route path="/Profile" element={<Profile />} />
+            <Route path="/Report" element={<Report />} />
+            <Route path="/Setting" element={<Setting />} />
+            <Route path="/Wallet" element={<Wallet />} />
+            <Route path="/WalletDrawFund" element={<WalletDrawFund />} />
+            <Route
+              path="/WalletDrawFundScreen"
+              element={<WalletDrawFundScreen />}
+            />
+          </Route>
         </Routes>
         <BNav />
       </Router>

@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import Images from "../Images/7a7c7ed2-db3d-4c4a-959e-5f6018481360.png";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Otp = () => {
   const [otp, setOtp] = useState("");
+  const navigate = useNavigate();
 
-  const verifyOtp = async (e) => {
+  const verifyOtp = (e) => {
     e.preventDefault();
     console.log(otp);
+    navigate("/Home");
   };
 
   return (

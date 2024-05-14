@@ -1,7 +1,15 @@
 import React from "react";
 import Images from "../Images/7a7c7ed2-db3d-4c4a-959e-5f6018481360.png";
+import { useNavigate } from "react-router-dom";
 
 const VerifyOtp = () => {
+  const navigate = useNavigate();
+
+  const verifyOtp = (e) => {
+    e.preventDefault();
+
+    navigate("/ForgotPassword");
+  };
   return (
     <section className="bg-gray-300 min-h-screen flex items-center justify-center flex-col py-2 px-2 overflow-hidden ">
       <div className="bg-white flex flex-col justify-center items-center shadow-xl rounded-lg border-2 border-white">
@@ -20,9 +28,7 @@ const VerifyOtp = () => {
             <p className="text-left">
               Enter the code which has been send to contact@poodles.in
             </p>
-            <form
-              className="flex flex-col gap-4 py-6" /* onSubmit={verifyOtp} */
-            >
+            <form className="flex flex-col gap-4 py-6" onSubmit={verifyOtp}>
               <div className="flex flex-col">
                 <label htmlFor="otp">Enter Your Email Address</label>
                 <div className="flex flex-row gap-3">

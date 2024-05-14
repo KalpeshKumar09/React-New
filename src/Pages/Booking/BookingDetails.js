@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const BookingDetails = () => {
+  const navigate = useNavigate();
+
+  const complete = () => {
+    navigate("/BookingDetailsComplete");
+  };
   return (
     <div className="flex flex-col items-center pt-10 mx-auto w-full bg-white max-w-[480px]">
       <div className="flex flex-col px-2 py-3.5 mt-10 w-full text-sm font-medium text-black rounded-lg bg-zinc-300 max-w-[308px]">
@@ -102,7 +108,10 @@ const BookingDetails = () => {
           </button>
         </div>
       </div>
-      <button className="flex flex-col justify-center px-6 py-3.5 mt-3 max-w-full text-sm font-medium rounded-xl bg-zinc-300 text-neutral-800 w-[184px]">
+      <button
+        onClick={complete}
+        className="flex flex-col justify-center px-6 py-3.5 mt-3 max-w-full text-sm font-medium rounded-xl bg-zinc-300 text-neutral-800 w-[184px]"
+      >
         <svg
           width="30"
           height="17"

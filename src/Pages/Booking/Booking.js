@@ -1,6 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Booking = () => {
+  const navigate = useNavigate();
+  const details = () => {
+    navigate("/BookingDetails");
+  };
   return (
     <div className="flex flex-col items-center pt-10 bg-white max-w-screen py-20">
       <div className="flex gap-5 flex-col justify-between w-full text-sm max-w-screen text-neutral-800">
@@ -13,7 +18,9 @@ const Booking = () => {
             <div className="flex flex-col sm:flex-col sm:justify-between px-4  md:justify-center md:flex-col lg:flex-row lg:justify-between   py-3 mt-3.5 w-full  rounded-md  lg:bg-transparent  text-neutral-800 border-2 border-zinc-400 bg-gray-200">
               <div>
                 <div className="flex gap-5 justify-between sm:flex-col md:flex-row lg:flex-row">
-                  <div className="text-sm font-medium">Jhon Doe</div>
+                  <div onClick={details} className="text-sm font-medium">
+                    Jhon Doe
+                  </div>
                   <div className="text-xs md:opacity-5 lg:opacity-0">
                     Upcoming
                   </div>

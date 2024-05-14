@@ -1,8 +1,15 @@
 import React from "react";
 import Images from "../Images/05041e86-1436-458c-8e7e-756fe84cbb89.png";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ForgotPassword = () => {
+  const navigate = useNavigate();
+
+  const forgotPassword = (e) => {
+    e.preventDefault();
+
+    navigate("/UpdatedPassword");
+  };
   return (
     <section className="bg-gray-300 min-h-screen flex items-center justify-center flex-col  py-2 px-4 overflow-hidden">
       <div className=" bg-white flex flex-col justify-center items-center shadow-xl rounded-lg border-2 border-white">
@@ -48,12 +55,12 @@ const ForgotPassword = () => {
               </div>
 
               <div className="flex justify-center">
-                <Link
-                  to="/UpdatedPassword"
+                <buttno
+                  onClick={forgotPassword}
                   className="bg-[#545AFA] rounded-md text-white py-3 hover:scale-105 duration-300 w-44 h-14 text-lg text-center"
                 >
                   Update Password
-                </Link>
+                </buttno>
               </div>
             </form>
           </div>

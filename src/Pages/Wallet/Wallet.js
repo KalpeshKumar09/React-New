@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Wallet = () => {
   return (
@@ -118,7 +119,9 @@ const Wallet = () => {
           </h4>
           <h2 className="text-lg font-semibold">INR 6200</h2>
         </div>
-        <h4 className="mt-3.5 text-sm font-medium">Withdraw Funds</h4>
+        <Link to="/WithDrawFunds" className="mt-3.5 text-sm font-medium">
+          Withdraw Funds
+        </Link>
       </div>
     </div>
   );

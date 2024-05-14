@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const useAuth = () => {
@@ -12,13 +12,6 @@ const Nav = () => {
   };
 
   const user = useAuth();
-
-  const navigate = useNavigate();
-
-  const logout = () => {
-    localStorage.removeItem("user");
-    navigate("/Login");
-  };
 
   return (
     <>
@@ -35,7 +28,9 @@ const Nav = () => {
               >
                 Booking
               </Link>
-              <Link className="text-[14px] text-center text-white">Wallet</Link>
+              <Link to="/Wallet" className="text-[14px] text-center text-white">
+                Wallet
+              </Link>
             </div>
           </div>
         </>

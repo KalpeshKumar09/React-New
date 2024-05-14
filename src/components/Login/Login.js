@@ -52,10 +52,7 @@ const Login = () => {
               </div>
 
               <div className=" text-xs #002D74] py-4 text-[#002D74]">
-                <Link
-                  to="/ForgotPassword"
-                  className="text-[14px] font-semibold"
-                >
+                <Link to="/VerifyEmail" className="text-[14px] font-semibold">
                   Forgot your password?
                 </Link>
               </div>
