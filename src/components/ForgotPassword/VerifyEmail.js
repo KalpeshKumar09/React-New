@@ -12,52 +12,48 @@ const VerifyEmail = () => {
   };
 
   return (
-    <section className="bg-gray-300 min-h-screen flex items-center justify-center flex-col py-2 px-2  overflow-hidden">
-      <div className="bg-white flex flex-col justify-center items-center  rounded-lg shadow-xl border-2 border-white p-4">
-        <div className=" flex  max-w-3xl p-2 items-center lg:flex lg:flex-row md:flex md:flex-row min-[360px]:flex min-[360px]:flex-col rounded-2xl ">
-          <div className="max-w-xl">
-            <img
-              className="rounded-2xl sm:block visible"
-              src={Images}
-              alt="logo"
-            />
+    <div className="bg-gray-300 min-h-screen flex items-center flex-col py-4 px-2  overflow-hidden">
+      <div className="bg-white max-w-[360px] flex flex-col justify-center items-center  rounded-lg shadow-xl border-2 border-white">
+        <div className=" flex flex-col p-4 items-center  rounded-2xl ">
+          <div className="">
+            <img className="w-64 h-64" src={Images} alt="logo" />
           </div>
-          <div className="max-w-2xl ">
+          <div className="flex flex-col gap-6">
             <div>
-              <h2 className="font-bold text-3xl text-black px-2 text-left">
-                Hey, Show Us It's You!
+              <h2 className="font-bold text-xl text-black text-left">
+                Hey, <br />
+                Show Us It's You!
               </h2>
+              <p className="">Please verify your email to continue</p>
             </div>
-            <p className="text-left">Please verify your email to continue</p>
-            <form className="flex flex-col gap-4 py-2" onSubmit={getOtp}>
+
+            <form className="flex flex-col gap-6 py-2" onSubmit={getOtp}>
               <div className="flex flex-col">
-                <label htmlFor="email" className="text-lg">
+                <label htmlFor="email" className="">
                   Enter Your Email Address
                 </label>
                 <input
-                  className="p-2 mt-1 rounded-md border bg-[#E5E8F2] h-14"
+                  className="p-2 rounded-md border bg-[#E5E8F2]"
                   type="email"
                   name="email"
                   /*    onChange={(e) => setEmail(e.target.value)} */
                   /* value={email} */
-                  required
                 />
                 <div id="recaptcha-container"></div>
               </div>
-
-              <div className="flex justify-center items-center">
-                <Link
-                  to="/Otp"
-                  className="bg-[#545AFA] rounded-md text-white py-3 hover:scale-105 duration-300 w-44 h-14 text-lg text-center"
+              <div className="flex justify-center">
+                <button
+                  /* onClick={handleSubmit} */
+                  className="bg-[#545AFA] rounded-md text-white py-2 hover:scale-105 duration-300 w-44 h-12 text-lg font-semibold"
                 >
                   Continue
-                </Link>
+                </button>
               </div>
             </form>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

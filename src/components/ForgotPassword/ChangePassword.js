@@ -2,9 +2,9 @@ import React from "react";
 
 const ChangePassword = () => {
   return (
-    <section className="bg-white min-h-screen flex justify-center overflow-hidden py-2 px-2">
-      <div className="flex flex-col items-center shadow-lg rounded-lg  bg-[#E5E8F2]">
-        <div className=" flex max-w-3xl p-1 items-center lg:flex lg:flex-row  md:flex md:flex-row min-[320px]:flex min-[320px]:flex-col">
+    <div className="bg-white min-h-screen flex justify-center py-2 px-2">
+      <div className=" max-w-[360px] flex flex-col items-center rounded-xl  bg-[#E5E8F2]">
+        <div className=" flex flex-col p-1 items-center ">
           <div className="flex gap-3 flex-col ">
             <h1 className="text-[22px]  text-center font-extrabold">
               Change password
@@ -65,7 +65,7 @@ const ChangePassword = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

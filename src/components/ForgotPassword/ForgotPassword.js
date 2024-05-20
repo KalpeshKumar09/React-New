@@ -11,30 +11,28 @@ const ForgotPassword = () => {
     navigate("/UpdatedPassword");
   };
   return (
-    <section className="bg-gray-300 min-h-screen flex items-center justify-center flex-col  py-2 px-4 overflow-hidden">
-      <div className=" bg-white flex flex-col justify-center items-center shadow-xl rounded-lg border-2 border-white">
-        <div className=" flex  max-w-3xl p-2 items-center lg:flex lg:flex-row md:flex md:flex-row min-[360px]:flex min-[360px]:flex-col rounded-2xl ">
-          <div className="max-w-xl">
-            <img
-              className="rounded-2xl sm:block visible"
-              src={Images}
-              alt="logo"
-            />
+    <section className="bg-gray-300 min-h-screen flex items-center  flex-col  py-2 px-4 overflow-hidden">
+      <div className=" bg-white max-w-[360px] flex flex-col justify-center items-center shadow-xl rounded-lg border-2 border-white">
+        <div className=" flex flex-col  p-2 items-center  ">
+          <div className="">
+            <img className="w-64 h-64" src={Images} alt="logo" />
           </div>
-          <div className="max-w-2xl">
-            <h2 className="font-bold text-3xl text-black text-left">
-              Hey, Welcome Back To Continue!
-            </h2>
-            <p className="text-left">
-              Your new password must be different from your last password
-            </p>
+          <div className="">
+            <div className="flex flex-col gap-4">
+              <h2 className="font-bold text-xl text-black text-left">
+                Hey, <br /> Enter Your New Password
+              </h2>
+              <p className="text-left">
+                Your new password must be different from your last password
+              </p>
+            </div>
             <form className="flex flex-col gap-4 py-2">
               <div className="flex flex-col">
-                <label htmlFor="newPassword" className="text-lg">
+                <label htmlFor="newPassword" className="">
                   Enter New Password
                 </label>
                 <input
-                  className="p-2 mt-1 rounded-md border bg-[#E5E8F2] h-14"
+                  className="p-2 mt-1 rounded-md border bg-[#E5E8F2]"
                   type="password"
                   name="newPassword"
                   required
@@ -42,27 +40,26 @@ const ForgotPassword = () => {
                 <div id="recaptcha-container"></div>
               </div>
               <div className="flex flex-col">
-                <label htmlFor="confirmPassword" className="text-lg">
+                <label htmlFor="confirmPassword" className="">
                   Confirm New Password
                 </label>
                 <input
-                  className="p-2 mt-1 rounded-md border bg-[#E5E8F2] h-14"
+                  className="p-2 mt-1 rounded-md border bg-[#E5E8F2]"
                   type="password"
                   name="confirmPassword"
                   required
                 />
                 <div id="recaptcha-container"></div>
               </div>
-
-              <div className="flex justify-center">
-                <buttno
-                  onClick={forgotPassword}
-                  className="bg-[#545AFA] rounded-md text-white py-3 hover:scale-105 duration-300 w-44 h-14 text-lg text-center"
-                >
-                  Update Password
-                </buttno>
-              </div>
             </form>
+            <div className="flex justify-center py-6">
+              <buttno
+                onClick={forgotPassword}
+                className="bg-[#545AFA] rounded-md text-white py-2 hover:scale-105 duration-300 w-44 h-12 text-lg text-center"
+              >
+                Update Password
+              </buttno>
+            </div>
           </div>
         </div>
       </div>
