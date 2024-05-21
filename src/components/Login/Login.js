@@ -1,17 +1,18 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Images from "../Images/262d36ab-e1e2-4075-9825-fe6332071f2e.png";
+import { useAuth } from "../../Routes/AuthContext";
 
 const Login = () => {
   /*  const [email, setEmail] = useState();
   const [password, setPassword] = useState(); */
 
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*   console.log(email + password); */
-    localStorage.setItem("user", "test");
+    login();
     navigate("/Home");
   };
   return (

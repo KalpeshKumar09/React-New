@@ -3,14 +3,13 @@ import Images from "../Images/7a7c7ed2-db3d-4c4a-959e-5f6018481360.png";
 import { useNavigate } from "react-router-dom";
 
 const Otp = () => {
-  /* const [otp, setOtp] = useState("");
   const navigate = useNavigate();
 
   const verifyOtp = (e) => {
     e.preventDefault();
     console.log(otp);
     navigate("/Home");
-  }; */
+  };
 
   const [otp, setOtp] = useState(new Array(5).fill(""));
 
@@ -69,7 +68,7 @@ const Otp = () => {
               </div>
               <div className="flex justify-center py-4">
                 <button
-                  /* onClick={handleSubmit} */
+                  onClick={verifyOtp}
                   className="bg-[#545AFA] rounded-md text-white py-2 hover:scale-105 duration-300 w-44 h-12 text-lg font-semibold"
                 >
                   Sign In
