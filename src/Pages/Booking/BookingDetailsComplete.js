@@ -8,7 +8,7 @@ const BookingDetailsComplete = () => {
     navigate("/BookingOtp");
   };
   return (
-    <div className="flex flex-col pt-10 mx-auto w-full bg-white max-w-[480px]">
+    <div className="flex flex-col items-center mx-auto w-full bg-white max-w-[360px] py-4">
       <div className="flex flex-col pr-7 pl-3 w-full">
         <div className="flex flex-col justify-center self-start px-2 py-3 mt-2 ml-4 text-sm font-medium text-black rounded-lg bg-zinc-300">
           <div className="flex flex-col items-start pt-1.5 pr-16 pb-7 pl-5 bg-white rounded">
@@ -70,7 +70,7 @@ const BookingDetailsComplete = () => {
         </div>
         <button
           onClick={otp}
-          className="flex flex-col justify-center self-center px-14 py-3.5 mt-5 max-w-full text-sm font-medium whitespace-nowrap rounded-xl bg-zinc-300 text-neutral-800 w-[184px]"
+          className="flex flex-col justify-center items-center self-center px-14 py-3.5 mt-5 max-w-full text-sm font-medium whitespace-nowrap rounded-xl bg-zinc-300 text-neutral-800 w-[184px]"
         >
           <svg
             width="30"

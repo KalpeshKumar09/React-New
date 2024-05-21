@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const Wallet = () => {
   return (
-    <div className="flex flex-col pt-10 bg-white max-w-[360px]">
-      <div className="flex flex-col px-7 w-full text-neutral-800">
-        <div className="flex flex-col justify-center items-center px-20 py-4 mt-9 rounded-md bg-neutral-100">
+    <div className="flex flex-col py-2 bg-white max-w-[360px] min-h-screen">
+      <div className="flex flex-col px-8 w-full text-neutral-800">
+        <div className="flex flex-col justify-center items-center px-20 py-4 rounded-md bg-neutral-100">
           <h2 className="text-sm font-medium">Total Earnings</h2>
           <h2 className="mt-3.5 text-xl font-semibold">INR 20,000</h2>
         </div>

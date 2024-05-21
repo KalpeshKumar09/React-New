@@ -8,7 +8,7 @@ const WithDrawFunds = () => {
     navigate("/WithDrawFundsScreen");
   };
   return (
-    <div className="flex flex-col pt-10 mx-auto w-full bg-white max-w-[480px]">
+    <div className="flex flex-col  mx-auto bg-white max-w-[480px] min-h-screen">
       <div className="flex flex-col px-7 w-full text-neutral-800">
         <div className="flex flex-col px-20 py-5 mt-9 rounded-md bg-neutral-100">
           <h4 className="text-sm font-medium">Available To Withdraw</h4>
@@ -31,7 +31,7 @@ const WithDrawFunds = () => {
         <div className="shrink-0 mt-3.5 rounded-md bg-zinc-300 h-[37px]" />
         <button
           onClick={withDraw}
-          className="flex flex-col justify-center self-center px-9 py-2.5 mt-6 max-w-full text-sm font-medium rounded-xl bg-zinc-300 w-[184px]"
+          className="flex flex-col justify-center items-center self-center px-9 py-2.5 mt-6 max-w-full text-sm font-medium rounded-xl bg-zinc-300 w-[184px]"
         >
           <svg
             width="26"

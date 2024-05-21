@@ -24,8 +24,8 @@ import Profile from "./Pages/Profile/Profile";
 import Report from "./Pages/Report/Report";
 import Setting from "./Pages/Setting/Setting";
 import Wallet from "./Pages/Wallet/Wallet";
-import WalletDrawFund from "./Pages/Wallet/WithDrawFunds";
-import WalletDrawFundScreen from "./Pages/Wallet/WithDrawFundsScreen";
+import WithDrawFunds from "./Pages/Wallet/WithDrawFunds";
+import WithDrawFundsScreen from "./Pages/Wallet/WithDrawFundsScreen";
 import PublicRoute from "./Routes/PublicRoute";
 import ProtectedRoute from "./Routes/ProtectedRoute";
 import { AuthProvider } from "./Routes/AuthContext";
@@ -40,7 +40,6 @@ function App() {
             <Route element={<PublicRoute />}>
               <Route path="/" element={<Login />} />
               <Route path="/Login" element={<Login />} />
-              <Route path="/ChangePassword" element={<ChangePassword />} />
               <Route path="/ForgotPassword" element={<ForgotPassword />} />
               <Route path="/UpdatedPassword" element={<UpdatedPassword />} />
               <Route path="/VerifyEmail" element={<VerifyEmail />} />
@@ -63,13 +62,14 @@ function App() {
               <Route path="/Contact" element={<Contact />} />
               <Route path="/AddProfile" element={<AddProfile />} />
               <Route path="/Profile" element={<Profile />} />
+              <Route path="/ChangePassword" element={<ChangePassword />} />
               <Route path="/Report" element={<Report />} />
               <Route path="/Setting" element={<Setting />} />
               <Route path="/Wallet" element={<Wallet />} />
-              <Route path="/WalletDrawFund" element={<WalletDrawFund />} />
+              <Route path="/WithDrawFunds" element={<WithDrawFunds />} />
               <Route
-                path="/WalletDrawFundScreen"
-                element={<WalletDrawFundScreen />}
+                path="/WithDrawFundsScreen"
+                element={<WithDrawFundsScreen />}
               />
             </Route>
           </Routes>
