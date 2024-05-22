@@ -71,6 +71,7 @@ function App() {
                 path="/WithDrawFundsScreen"
                 element={<WithDrawFundsScreen />}
               />
+              <Route path="Profile" element={<Profile />} />
             </Route>
           </Routes>
           <BNav />

@@ -138,7 +138,7 @@ export default function Navbar() {
             </section>
           </div>
 
-          <section className="flex items-center gap-4">
+          <Link className="flex items-center gap-4" to="/Profile">
             <svg
               width="64"
               height="64"
@@ -171,7 +171,7 @@ export default function Navbar() {
                 </clipPath>
               </defs>
             </svg>
-          </section>
+          </Link>
         </nav>
       )}
     </>
