@@ -13,8 +13,8 @@ const Contact = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen py-2">
-      <div className="bg-white  flex justify-center overflow-hidden max-w-[360px]">
-        <div className="flex flex-col">
+      <div className="bg-white  flex justify-center overflow-hidden">
+        <div className="flex flex-col md:min-w-[800px] min-w-[360px]">
           <div className="bg-white p-2">
             <Link to="/Setting">
               <svg

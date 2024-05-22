@@ -10,8 +10,8 @@ const Report = () => {
   };
   return (
     <div className="flex items-center justify-center min-h-screen py-2">
-      <section className="bg-white max-w-[360px] min-h-screen flex  justify-center px-2 overflow-hidden">
-        <div className="flex flex-col">
+      <section className="bg-white min-h-screen flex  justify-center px-2 overflow-hidden">
+        <div className="flex flex-col md:min-w-[800px] min-w-[360px]">
           <div className="bg-white p-2">
             <Link to="/Setting">
               <svg

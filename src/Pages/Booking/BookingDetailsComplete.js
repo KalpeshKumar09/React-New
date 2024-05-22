@@ -8,9 +8,9 @@ const BookingDetailsComplete = () => {
     navigate("/BookingOtp");
   };
   return (
-    <div className="flex flex-col items-center mx-auto w-full bg-white max-w-[360px] py-4">
-      <div className="flex flex-col pr-7 pl-3 w-full">
-        <div className="flex flex-col justify-center self-start px-2 py-3 mt-2 ml-4 text-sm font-medium text-black rounded-lg bg-zinc-300">
+    <div className="flex flex-col items-center bg-white py-4">
+      <div className="flex flex-col">
+        <div className="flex flex-col justify-center self-start px-2 py-3 mt-2 ml-4 text-sm font-medium text-black rounded-lg bg-zinc-300 md:min-w-[800px] min-w-[360px]">
           <div className="flex flex-col items-start pt-1.5 pr-16 pb-7 pl-5 bg-white rounded">
             <div className="self-center"> Service Details</div>
             <div className="mt-4 text-neutral-800">

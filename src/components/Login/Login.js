@@ -16,8 +16,8 @@ const Login = () => {
     navigate("/Home");
   };
   return (
-    <div className="bg-gray-300 min-h-screen  flex items-center  flex-col py-2 px-2">
-      <div className="max-w-[360px] flex flex-col justify-center items-center rounded-xl shadow-xl border border-white bg-white">
+    <div className="bg-gray-300 min-h-screen  flex items-center  flex-col py-2 px-2 md:px-6">
+      <div className="max-w-[360px] flex flex-col justify-center items-center rounded-xl shadow-xl border border-white bg-white md:max-w-[800px]">
         <div className=" flex flex-col px-2 items-center  rounded-2xl ">
           <div className="">
             <img className="w-64 h-64" src={Images} alt="logo" />

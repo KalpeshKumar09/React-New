@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const Setting = () => {
   return (
     <div className="flex justify-center min-h-screen py-2">
-      <div className="bg-gray-50 flex flex-col min-w-[360px]">
+      <div className="bg-gray-100 flex flex-col md:min-w-[800px] min-w-[360px]">
         <div className="flex flex-col ">
-          <div className="bg-white p-2">
+          <div className="bg-white p-2 ">
             <Link to="/Home">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

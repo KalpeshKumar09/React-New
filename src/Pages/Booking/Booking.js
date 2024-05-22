@@ -8,46 +8,50 @@ const Booking = () => {
   };
   return (
     <div className="flex items-center justify-center">
-      <div className="flex flex-col items-center bg-white max-w-[360px] min-h-screen py-4">
-        <div className="flex gap-5 flex-col justify-between w-full text-sm max-w-screen text-neutral-800">
-          <div className="w-full flex flex-col">
-            <div className="flex flex-row justify-between px-10 w-full p-4">
-              <div className=" font-medium">Upcoming Bookings</div>
-              <div className="">View All</div>
-            </div>
-            <div className="px-10 " onClick={details}>
-              <div className="flex flex-col sm:flex-col sm:justify-between px-4  md:justify-center md:flex-col lg:flex-row lg:justify-between   py-3 mt-3.5 w-full  rounded-md  lg:bg-transparent  text-neutral-800 border-2 border-zinc-400 bg-gray-200">
-                <div>
-                  <div className="flex gap-5 justify-between sm:flex-col md:flex-row lg:flex-row">
-                    <div className="text-sm font-medium">Jhon Doe</div>
-                    <div className="text-xs md:opacity-5 lg:opacity-0">
-                      Upcoming
+      <div className="flex flex-col items-center bg-white min-h-screen py-4 ">
+        <div className="flex gap-5 flex-col justify-between text-sm text-neutral-800 md:min-w-[800px] min-w-[360px]">
+          <div className="flex gap-5 justify-between w-full text-sm  text-neutral-800 py-6 max-w-[800px]">
+            <div className="w-full flex flex-col gap-4">
+              <div className="flex flex-row justify-between px-10 w-full md:px-4">
+                <div className=" font-bold">Upcoming Bookings</div>
+                <div className="">View All</div>
+              </div>
+
+              <div
+                className="px-10 cursor-pointer shadow-xl md:px-4 bg-gray-200 rounded-lg"
+                onClick={details}
+              >
+                <div className="flex flex-col  text-neutral-800 ">
+                  <div className="px-1">
+                    <div className="flex gap-5 justify-between sm:flex-col md:flex-row lg:flex-row">
+                      <div className="font-bold text-black">Jhon Doe</div>
+                      <div className="text-xs  lg:opacity-0">Upcoming</div>
+                    </div>
+                    <div className=" text-xs font-medium">Booking Slot</div>
+                    <div className="self-start mt-2 text-xs text-zinc-700">
+                      Tuesday, March 30, 2024, 10:00 AM
                     </div>
                   </div>
-                  <div className=" text-xs font-medium">Booking Slot</div>
-                  <div className="self-start mt-2 text-xs text-zinc-700">
-                    Tuesday, March 30, 2024, 10:00 AM
-                  </div>
-                </div>
-                <div className=" ">
-                  <div className="text-sm text-zinc-700">
-                    456 Anytown Lane, Anytown,
-                    <br />
-                    CA 90210{" "}
-                  </div>
-                  <div className="mt-3 text-xs text-zinc-400">
-                    Received 20 minutes Ago
+                  <div className=" p-1">
+                    <div className="text-sm text-zinc-700">
+                      456 Anytown Lane, Anytown,
+                      <br />
+                      CA 90210{" "}
+                    </div>
+                    <div className="mt-3 text-xs text-zinc-400">
+                      Received 20 minutes Ago
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-full flex flex-col gap-4">
-            <div className="flex flex-row justify-between px-10 w-full p-4">
+          <div className="w-full flex flex-col gap-4 rounded-lg shadow-lg">
+            <div className="flex flex-row justify-between px-10 w-full p-4 md:px-4">
               <div className=" font-medium">Upcoming Bookings</div>
               <div className="">View All</div>
             </div>
-            <div className="px-10 flex gap-4 flex-col">
+            <div className="px-10 flex gap-4 flex-col md:px-4">
               <div className="flex gap-4 flex-row justify-between w-full rounded-md bg-white shadow-[0px_4px_4px_rgba(156,_154,_154,_0.25)]  overflow-hidden">
                 <div className=" flex justify-center items-center">
                   <svg

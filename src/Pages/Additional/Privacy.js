@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Privacy = () => {
   return (
     <div className="flex items-center justify-center  min-h-screen">
-      <div className="bg-gray-50 min-h-screen flex items-center flex-col max-w-[360px]">
-        <div className="flex flex-col">
+      <div className="bg-gray-50 min-h-screen flex items-center flex-col">
+        <div className="flex flex-col md:min-w-[800px] min-w-[360px]">
           <div className="bg-white p-2">
             <Link to="/Setting">
               <svg
@@ -23,7 +23,7 @@ const Privacy = () => {
               </svg>
             </Link>
           </div>
-          <div className="flex flex-col shadow-lg  items-center bg-[#E5E8F2] p-4 ">
+          <div className="flex flex-col shadow-lg  items-center bg-[#E5E8F2] p-4 overflow-scroll">
             <h1 className="text-[22px] font-medium mt-2 text-center">
               Privacy Policy
             </h1>

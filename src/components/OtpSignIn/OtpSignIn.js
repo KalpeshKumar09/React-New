@@ -14,8 +14,8 @@ const OtpSignIn = () => {
 
   return (
     <div className="bg-gray-300 min-h-screen flex items-center  flex-col py-2 px-2  overflow-hidden">
-      <div className="max-w-[360px] bg-white flex flex-col justify-center items-center  rounded-lg shadow-xl border-2 border-white py-4">
-        <div className=" flex  flex-col px-2 items-center rounded-2xl ">
+      <div className=" bg-white flex flex-col justify-center items-center  rounded-lg shadow-xl border-2 border-white py-4">
+        <div className=" flex  flex-col px-2 items-center rounded-2xl md:min-w-[800px] min-w-[360px]">
           <div className="">
             <img className="w-64 h-64" src={Images} alt="logo" />
           </div>

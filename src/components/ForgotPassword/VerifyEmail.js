@@ -12,8 +12,8 @@ const VerifyEmail = () => {
   };
 
   return (
-    <div className="bg-gray-300 min-h-screen flex items-center flex-col py-4 px-2  overflow-hidden">
-      <div className="bg-white max-w-[360px] flex flex-col justify-center items-center  rounded-lg shadow-xl border-2 border-white">
+    <div className="bg-gray-300 min-h-screen flex items-center flex-col py-4 px-2 md:px-4">
+      <div className="max-w-[360px] flex flex-col justify-center items-center rounded-xl shadow-xl border border-white bg-white md:min-w-[800px]">
         <div className=" flex flex-col p-4 items-center  rounded-2xl ">
           <div className="">
             <img className="w-64 h-64" src={Images} alt="logo" />
@@ -21,7 +21,7 @@ const VerifyEmail = () => {
           <div className="flex flex-col gap-6">
             <div>
               <h2 className="font-bold text-xl text-black text-left">
-                Hey, <br />
+                Hey, <br className="md:block md:hidden" />
                 Show Us It's You!
               </h2>
               <p className="">Please verify your email to continue</p>

@@ -12,8 +12,8 @@ const UpdatedPassword = () => {
   };
   return (
     <section className="bg-gray-300 min-h-screen flex items-center  flex-col  py-4 px-4 overflow-hidden">
-      <div className=" bg-white max-w-[360px] flex flex-col justify-center items-center shadow-xl rounded-lg border-2 border-white">
-        <div className=" flex flex-col p-2 items-center rounded-2xl ">
+      <div className=" bg-white flex flex-col justify-center items-center shadow-xl rounded-lg border-2 border-white">
+        <div className=" flex flex-col p-2 items-center rounded-2xl md:min-w-[800px] min-w-[360px]">
           <div className="">
             <img className="w-64 h-64" src={Images} alt="logo" />
           </div>

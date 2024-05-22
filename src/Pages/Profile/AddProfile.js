@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const AddProfile = () => {
   return (
     <div className="flex justify-center min-h-screen py-2">
-      <div className="bg-white  flex justify-center overflow-hidden min-w-[360px]">
-        <div className="flex flex-col">
+      <div className="bg-gray-500  flex justify-center overflow-hidden">
+        <div className="flex flex-col md:min-w-[800px] min-w-[360px]">
           <div className="bg-white p-2">
             <Link to="/Setting">
               <svg

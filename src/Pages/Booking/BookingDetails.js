@@ -8,8 +8,8 @@ const BookingDetails = () => {
     navigate("/BookingDetailsComplete");
   };
   return (
-    <div className="flex flex-col items-center mx-auto w-full bg-white max-w-[360px] py-4">
-      <div className="flex flex-col px-2 py-3.5 mt-10 w-full text-sm font-medium text-black rounded-lg bg-zinc-300 max-w-[308px]">
+    <div className="flex flex-col items-center mx-auto w-full bg-white py-4">
+      <div className="flex flex-col px-2 py-3.5 mt-10 w-full text-sm font-medium text-black rounded-lg bg-zinc-300 md:min-w-[800px] min-w-[360px] md:px-4">
         <div className="flex flex-col items-start py-2 pr-16 pl-5 bg-white rounded">
           <div className="self-center"> Service Details</div>
           <div className="mt-3.5 text-zinc-700">
@@ -69,7 +69,7 @@ const BookingDetails = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-1.5 mt-3 text-neutral-800">
+        <div className="flex gap-1.5 mt-3 text-neutral-800 md:flex md:justify-center justify-center md:gap-4">
           <button className="flex flex-col justify-center items-center px-6 py-2.5 whitespace-nowrap bg-white rounded-xl">
             <svg
               width="27"
@@ -110,7 +110,7 @@ const BookingDetails = () => {
       </div>
       <button
         onClick={complete}
-        className="flex flex-col justify-center items-center px-6 py-3.5 mt-3 max-w-full text-sm font-medium rounded-xl bg-zinc-300 text-neutral-800 w-[184px]"
+        className="flex flex-col justify-center items-center px-4 py-3.5 mt-3 max-w-full text-sm font-medium rounded-xl bg-zinc-300 text-neutral-800 w-[184px] md:px-2"
       >
         <svg
           width="30"

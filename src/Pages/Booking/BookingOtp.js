@@ -22,7 +22,7 @@ const BookingOtp = () => {
   };
   return (
     <div className="flex items-center justify-center">
-      <div className="flex flex-col bg-white max-w-[360px] min-h-screen">
+      <div className="flex flex-col bg-white md:min-w-[800px] min-w-[360px] min-h-screen">
         <div className="flex flex-col items-center px-2.5 w-full text-sm text-neutral-800">
           <button className="flex gap-3 self-start mt-9 font-medium">
             <svg
@@ -46,10 +46,10 @@ const BookingOtp = () => {
             Enter the 5-digit OTP code that has been sent from SMS to complete
             your account registration
           </p>
-          <div className="flex gap-2 self-stretch mt-3.5 text-4xl font-medium leading-9 text-center text-black whitespace-nowrap">
-            <form className="flex flex-col gap-4 px-2 overflow-hidden">
+          <div className="flex gap-2 self-stretch mt-3.5 text-4xl font-medium leading-9 text-center text-black whitespace-nowrap ">
+            <form className="flex flex-col gap-4 px-2 overflow-hidden md:py-8">
               <div className="flex flex-col gap-4">
-                <div className="flex flex-row justify-center items-center gap-4">
+                <div className="flex flex-row justify-center items-center gap-4 md:flex md:flex-row md:items-center md:gap-28">
                   {otp.map((data, index) => {
                     return (
                       <input

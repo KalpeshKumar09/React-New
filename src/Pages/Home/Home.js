@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
   return (
     <section className="bg-white flex flex-col items-center min-h-screen">
-      <div className="min-w-[360px] flex flex-col items-center   gap-4 rounded-xl py-2">
+      <div className="min-w-[360px] flex flex-col items-center   gap-4 rounded-xl py-2 md:min-w-[800px]">
         <div className="">
           <button className="flex flex-col gap-1 justify-center items-center p-2 mt-4  text-base font-medium rounded-md bg-black text-white w-64 h-12">
             Go Online
@@ -13,21 +13,19 @@ const Home = () => {
             </label>
           </button>
         </div>
-        <div className="flex gap-5 justify-between w-full text-sm max-w-screen text-neutral-800 py-6">
+        <div className="flex gap-5 justify-between w-full text-sm  text-neutral-800 py-6 max-w-[800px]">
           <div className="w-full flex flex-col gap-4">
             <div className="flex flex-row justify-between px-10 w-full">
               <div className=" font-bold">Upcoming Bookings</div>
               <div className="">View All</div>
             </div>
 
-            <div className="px-10">
-              <div className="flex flex-col bg-white   text-neutral-800 ">
+            <div className="px-10 shadow-xl md:px-4">
+              <div className="flex flex-col  text-neutral-800 ">
                 <div className="px-1">
                   <div className="flex gap-5 justify-between sm:flex-col md:flex-row lg:flex-row">
                     <div className="font-bold text-black">Jhon Doe</div>
-                    <div className="text-xs md:opacity-5 lg:opacity-0">
-                      Upcoming
-                    </div>
+                    <div className="text-xs  lg:opacity-0">Upcoming</div>
                   </div>
                   <div className=" text-xs font-medium">Booking Slot</div>
                   <div className="self-start mt-2 text-xs text-zinc-700">
