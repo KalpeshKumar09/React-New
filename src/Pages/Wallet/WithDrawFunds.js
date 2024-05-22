@@ -10,28 +10,67 @@ const WithDrawFunds = () => {
   return (
     <div className="flex flex-col  mx-auto bg-white max-w-[480px] min-h-screen">
       <div className="flex flex-col px-7 w-full text-neutral-800">
-        <div className="flex flex-col px-20 py-5 mt-9 rounded-md bg-neutral-100">
-          <h4 className="text-sm font-medium">Available To Withdraw</h4>
-          <h2 className="self-center mt-4 text-xl font-semibold">INR 6200</h2>
+        <div className="flex flex-col px-10 py-4 rounded-md bg-neutral-100">
+          <h4 className="text-sm font-medium text-center">
+            Available To Withdraw
+          </h4>
+          <h2 className="self-center text-center mt-4 text-xl font-semibold">
+            INR 6200
+          </h2>
         </div>
-        <h4 className="mt-5 text-sm font-medium">Withdraw Request</h4>
-        <p className="justify-center items-center p-2.5 mt-2.5 text-sm text-black rounded-md bg-zinc-300">
-          Enter Amount
-        </p>
-        <h4 className="mt-5 text-sm font-medium">Enter Bank Details</h4>
-        <h4 className="mt-7 text-sm font-medium">Customer Name</h4>
-        <p className="shrink-0 mt-3.5 rounded-md bg-zinc-300 h-[37px]" />
-        <h4 className="mt-3.5 text-sm font-medium">Account Number</h4>
-        <div className="shrink-0 mt-3.5 rounded-md bg-zinc-300 h-[37px]" />
-        <h4 className="mt-3.5 text-sm font-medium">Confirm Account Number</h4>
-        <div className="shrink-0 mt-3.5 rounded-md bg-zinc-300 h-[37px]" />
-        <h4 className="mt-3.5 text-sm font-medium">Bank Name</h4>
-        <div className="shrink-0 mt-3.5 rounded-md bg-zinc-300 h-[37px]" />
-        <h4 className="mt-3.5 text-sm font-medium">Ifsc Code</h4>
-        <div className="shrink-0 mt-3.5 rounded-md bg-zinc-300 h-[37px]" />
+        <form action="">
+          <div>
+            <div className="flex flex-col">
+              <label htmlFor="">Withdraw Request</label>
+              <input
+                type="text"
+                value="Enter Amount"
+                className="justify-center flex text-center items-center p-2.5 mt-2.5 text-sm text-black rounded-md bg-zinc-300"
+              />
+            </div>
+          </div>
+          <div className="gap-2 flex flex-col">
+            <h4 className="mt-5 text-sm font-medium">Enter Bank Details</h4>
+            <div className="flex flex-col">
+              <label htmlFor="">Customer Name</label>
+              <input
+                type="text"
+                className="justify-center flex  items-center p-2.5 mt-2.5 text-sm text-black rounded-md bg-zinc-300"
+              />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="">Account Number</label>
+              <input
+                type="text"
+                className="justify-center flex items-center p-2.5 mt-2.5 text-sm text-black rounded-md bg-zinc-300"
+              />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="">Confirm Account Number</label>
+              <input
+                type="text"
+                className="justify-center flex items-center p-2.5 mt-2.5 text-sm text-black rounded-md bg-zinc-300"
+              />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="">Bank Name</label>
+              <input
+                type="text"
+                className="justify-center flex items-center p-2.5 mt-2.5 text-sm text-black rounded-md bg-zinc-300"
+              />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="">Ifsc Code</label>
+              <input
+                type="text"
+                className="justify-center flex items-center p-2.5 mt-2.5 text-sm text-black rounded-md bg-zinc-300"
+              />
+            </div>
+          </div>
+        </form>
         <button
           onClick={withDraw}
-          className="flex flex-col justify-center items-center self-center px-9 py-2.5 mt-6 max-w-full text-sm font-medium rounded-xl bg-zinc-300 w-[184px]"
+          className="flex flex-col justify-center items-center self-center px-2 py-2.5 mt-8 text-sm font-medium rounded-xl bg-zinc-300 w-52"
         >
           <svg
             width="26"
@@ -46,7 +85,7 @@ const WithDrawFunds = () => {
             />
           </svg>
 
-          <h4>Request Payout</h4>
+          <h4 className="text-center">Request Payout</h4>
         </button>
       </div>
     </div>

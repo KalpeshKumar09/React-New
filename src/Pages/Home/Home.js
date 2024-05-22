@@ -2,14 +2,14 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="bg-white flex flex-col items-center min-h-screen py-4">
-      <div className="min-w-[360px] flex flex-col items-center   gap-4 rounded-xl py-4">
+    <section className="bg-white flex flex-col items-center min-h-screen">
+      <div className="min-w-[360px] flex flex-col items-center   gap-4 rounded-xl py-2">
         <div className="">
           <button className="flex flex-col gap-1 justify-center items-center p-2 mt-4  text-base font-medium rounded-md bg-black text-white w-64 h-12">
             Go Online
-            <label class="inline-flex items-center mb-2 justify-center cursor-pointer">
+            <label className="inline-flex items-center mb-2 justify-center cursor-pointer">
               <input type="checkbox" value="" class="sr-only peer" />
-              <div class="relative w-9 h-5 rounded-full peer-checked:after:bg-[#FAAF19] bg-gray-400 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full  after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white  after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#7276E8]"></div>
+              <span className="w-9 relative h-5 rounded-full peer-checked:after:bg-[#FAAF19] bg-gray-400 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full  after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white  after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#7276E8]"></span>
             </label>
           </button>
         </div>
@@ -49,7 +49,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
