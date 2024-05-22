@@ -32,7 +32,7 @@ import { AuthProvider } from "./Routes/AuthContext";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <BrowserRouter>
         <AuthProvider>
           <Navbar />
@@ -76,7 +76,7 @@ function App() {
           <BNav />
         </AuthProvider>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

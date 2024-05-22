@@ -3,9 +3,7 @@
 
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-
-import { CiMenuBurger } from "react-icons/ci";
-import { IoMdClose } from "react-icons/io";
+import { AiOutlineMenu } from "react-icons/ai";
 import clsx from "clsx";
 import { useAuth } from "../../Routes/AuthContext";
 
@@ -49,7 +47,7 @@ export default function Navbar() {
         <nav className="flex justify-between px-8 items-center py-6   ">
           <div className="flex items-center gap-8">
             <section className="flex items-center gap-4">
-              <CiMenuBurger
+              <AiOutlineMenu
                 onClick={() => setMenu(true)}
                 className="text-3xl cursor-pointer lg:hidden"
               />
@@ -70,13 +68,14 @@ export default function Navbar() {
               " fixed h-full w-screen lg:hidden bg-black/50  backdrop-blur-sm top-0 right-0  -translate-x-full  transition-all ",
               isSideMenuOpen && "translate-x-0"
             )}
+            onClick={() => setMenu(false)}
           >
-            <section className="text-black bg-white flex-col absolute left-0 top-0 h-screen p-4 gap-8 z-50 w-56 flex  ">
-              <IoMdClose
+            <section className="text-black bg-white flex-col absolute left-0 top-0 h-screen p-4 gap-4 z-50 w-56 flex">
+              {/*<IoMdClose
                 onClick={() => setMenu(false)}
                 className="mt-0 mb-8 text-3xl cursor-pointer"
-              />
-              <div className=" flex flex-row justify-start border-b-2 border-gray-300 gap-2">
+          />*/}
+              <div className=" flex flex-row justify-start border-b-2 border-gray-300 gap-2 px-2">
                 <div>
                   <svg
                     width="32"
@@ -112,11 +111,11 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex flex-col">
+                  <h4 className="text-[12px]">Hello</h4>
                   <h4 className="text-[12px]">Kalpesh Kumar</h4>
-                  <p className="text-[12px]">sutharkalpesh101@gmail.com</p>
                 </div>
               </div>
-              <div className="border-b-2 border-gray-300 flex flex-col justify-center items-start gap-3">
+              <div className="border-b-2 border-gray-300 flex flex-col justify-center items-start gap-3 px-4 py-4">
                 <Link to="/Setting" className="font-normal">
                   Settings
                 </Link>
@@ -133,7 +132,9 @@ export default function Navbar() {
                   T&C
                 </Link>
               </div>
-              <Link onClick={handleLogout}>LogOut</Link>
+              <div className="px-4">
+                <Link onClick={handleLogout}>LogOut</Link>
+              </div>
             </section>
           </div>
 

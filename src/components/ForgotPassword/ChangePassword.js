@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ChangePassword = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex justify-center min-h-screen">
       <div className="bg-white flex justify-center py-2 px-2 flex-col">
         <div className="bg-white p-2">
           <Link to="/Setting">

@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 const AddProfile = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen py-2">
-      <div className="bg-white  flex justify-center  py-2 overflow-hidden max-w-[360px]">
+    <div className="flex justify-center min-h-screen py-2">
+      <div className="bg-white  flex justify-center overflow-hidden min-w-[360px]">
         <div className="flex flex-col">
           <div className="bg-white p-2">
-            <Link to="/Setting" className="">
+            <Link to="/Setting">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
                 height="32"
                 fill="currentColor"
-                className="bi bi-arrow-left-short"
+                class="bi bi-arrow-left-short"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -23,10 +23,10 @@ const AddProfile = () => {
               </svg>
             </Link>
           </div>
-          <div className="flex flex-col items-center shadow-lg rounded-lg  bg-[#E5E8F2] h-screen w-screen">
-            <div className=" flex   items-center">
-              <div className="flex gap-2 flex-col py-4">
-                <h1 className="text-[22px]  text-center font-extrabold">
+          <div className="flex flex-col items-center shadow-lg rounded-lg  bg-[#E5E8F2]">
+            <div className="flex p-1 items-center">
+              <div className="flex gap-3 flex-col ">
+                <h1 className="text-[22px]  text-center font-bold py-4">
                   Profile Details
                 </h1>
                 <form
@@ -34,12 +34,12 @@ const AddProfile = () => {
                   className="flex flex-col gap-4 py-6"
                   /* onSubmit={handleSubmit} */
                 >
-                  <div className="flex flex-col w-full">
+                  <div className="flex flex-col">
                     <label htmlFor="fullName" className="">
                       Full Name
                     </label>
                     <input
-                      className="p-2 mt-1 rounded-md border bg-white"
+                      className="p-2 mt-1 rounded-md border bg-white w-96"
                       type="text"
                       name="fullName"
                       /* value={fullName}
@@ -85,7 +85,7 @@ const AddProfile = () => {
                   </div>
                   <div className="flex flex-col">
                     <h1 className="text-lg">Gender</h1>
-                    <div className="flex flex-row gap-4">
+                    <div className="flex flex-row gap-8 px-4">
                       <div className="flex flex-row">
                         <input
                           className="p-2 mt-1 rounded-md border bg-white"
@@ -112,13 +112,12 @@ const AddProfile = () => {
                       </div>
                     </div>
                   </div>
-
-                  <div className="flex justify-center">
-                    <button className="bg-[#545AFA] rounded-md text-white py-2 hover:scale-105 duration-300 w-60 h-12 text-lg">
-                      Save
-                    </button>
-                  </div>
                 </form>
+                <div className="flex justify-center py-6">
+                  <button className="bg-[#545AFA] rounded-md text-white py-2 hover:scale-105 duration-300 w-32 h-12 text-lg">
+                    Save
+                  </button>
+                </div>
               </div>
             </div>
           </div>
