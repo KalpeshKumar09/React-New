@@ -26,9 +26,13 @@ import Setting from "./Pages/Setting/Setting";
 import Wallet from "./Pages/Wallet/Wallet";
 import WithDrawFunds from "./Pages/Wallet/WithDrawFunds";
 import WithDrawFundsScreen from "./Pages/Wallet/WithDrawFundsScreen";
+import PayoutHistory from "./Pages/Wallet/PayoutHistory";
+import TransactionHistory from "./Pages/Wallet/TransactionHistory";
 import PublicRoute from "./Routes/PublicRoute";
 import ProtectedRoute from "./Routes/ProtectedRoute";
 import { AuthProvider } from "./Routes/AuthContext";
+import CompletedBookings from "./Pages/Booking/CompletedBookings";
+import UpcomingBookings from "./Pages/Booking/UpcomingBookings";
 
 function App() {
   return (
@@ -53,10 +57,13 @@ function App() {
               <Route path="/Privacy" element={<Privacy />} />
               <Route path="/Terms" element={<Terms />} />
               <Route path="/Booking" element={<Booking />} />
-              <Route path="/BookingDetails" element={<BookingDetails />} />
+              <Route
+                path="/BookingDetails/:userId"
+                element={<BookingDetails />}
+              />
               <Route path="/BookingOtp" element={<BookingOtp />} />
               <Route
-                path="/BookingDetailsCOmplete"
+                path="/BookingDetailsComplete/:userId"
                 element={<BookingDetailsComplete />}
               />
               <Route path="/Contact" element={<Contact />} />
@@ -71,7 +78,19 @@ function App() {
                 path="/WithDrawFundsScreen"
                 element={<WithDrawFundsScreen />}
               />
+              <Route path="/PayoutHistory" element={<PayoutHistory />} />
+              <Route
+                path="/TransactionHistory"
+                element={<TransactionHistory />}
+              />
+
               <Route path="Profile" element={<Profile />} />
+              <Route
+                path="/CompletedBookings"
+                element={<CompletedBookings />}
+              />
+
+              <Route path="/UpcomingBookings" element={<UpcomingBookings />} />
             </Route>
           </Routes>
           <BNav />

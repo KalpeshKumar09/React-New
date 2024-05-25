@@ -11,7 +11,7 @@ const ForgotPassword = () => {
     navigate("/UpdatedPassword");
   };
   return (
-    <section className="bg-gray-300 min-h-screen flex items-center  flex-col  py-2 px-4 overflow-hidden">
+    <section className="bg-gray-300 min-h-screen flex items-center  flex-col  py-2 px-4 overflow-hidden md:flex md:justify-center md:items-center">
       <div className=" bg-white flex flex-col justify-center items-center shadow-xl rounded-lg border-2 border-white">
         <div className=" flex flex-col  p-2 items-center md:min-w-[800px] min-w-[360px] ">
           <div className="">

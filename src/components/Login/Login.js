@@ -16,7 +16,7 @@ const Login = () => {
     navigate("/Home");
   };
   return (
-    <div className="bg-gray-300 min-h-screen  flex items-center  flex-col py-2 px-2 md:px-6">
+    <div className="bg-gray-300 min-h-screen  flex items-center  flex-col py-2 px-2 md:px-6 md:flex md:justify-center md:items-center">
       <div className="max-w-[360px] flex flex-col justify-center items-center rounded-xl shadow-xl border border-white bg-white md:max-w-[800px]">
         <div className=" flex flex-col px-2 items-center  rounded-2xl ">
           <div className="">

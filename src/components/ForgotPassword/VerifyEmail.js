@@ -12,7 +12,7 @@ const VerifyEmail = () => {
   };
 
   return (
-    <div className="bg-gray-300 min-h-screen flex items-center flex-col py-4 px-2 md:px-4">
+    <div className="bg-gray-300 min-h-screen flex items-center flex-col py-4 px-2 md:px-4 md:flex md:justify-center md:items-center">
       <div className="max-w-[360px] flex flex-col justify-center items-center rounded-xl shadow-xl border border-white bg-white md:min-w-[800px]">
         <div className=" flex flex-col p-4 items-center  rounded-2xl ">
           <div className="">

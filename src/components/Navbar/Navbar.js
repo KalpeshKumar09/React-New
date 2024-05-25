@@ -44,7 +44,7 @@ export default function Navbar() {
   return (
     <>
       {isAuthenticated && (
-        <nav className="flex justify-between px-8 items-center py-6   ">
+        <nav className="flex justify-between px-8 items-center py-4">
           <div className="flex items-center gap-8">
             <section className="flex items-center gap-4">
               <AiOutlineMenu
@@ -52,7 +52,7 @@ export default function Navbar() {
                 className="text-3xl cursor-pointer lg:hidden"
               />
             </section>
-            {navlinks.map((d, i) => (
+            {/* {navlinks.map((d, i) => (
               <Link
                 key={i}
                 className="hidden lg:block  text-gray-400 hover:text-black"
@@ -60,12 +60,12 @@ export default function Navbar() {
               >
                 {d.label}
               </Link>
-            ))}
+            ))} */}
           </div>
 
           <div
             className={clsx(
-              " fixed h-full w-screen lg:hidden bg-black/50  backdrop-blur-sm top-0 right-0  -translate-x-full  transition-all ",
+              " fixed h-full w-screen lg:hidden bg-black/50 backdrop-blur-sm md:bg-black/50 md:backdrop-blur-sm   top-0 right-0  -translate-x-full   ",
               isSideMenuOpen && "translate-x-0"
             )}
             onClick={() => setMenu(false)}

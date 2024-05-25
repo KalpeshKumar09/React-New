@@ -24,7 +24,7 @@ const BookingOtp = () => {
     <div className="flex items-center justify-center">
       <div className="flex flex-col bg-white md:min-w-[800px] min-w-[360px] min-h-screen">
         <div className="flex flex-col items-center px-2.5 w-full text-sm text-neutral-800">
-          <button className="flex gap-3 self-start mt-9 font-medium">
+          <button className="flex gap-3 self-start mt-9 font-medium cursor-pointer">
             <svg
               width="26"
               height="26"

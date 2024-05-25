@@ -13,7 +13,7 @@ const OtpSignIn = () => {
   };
 
   return (
-    <div className="bg-gray-300 min-h-screen flex items-center  flex-col py-2 px-2  overflow-hidden">
+    <div className="bg-gray-300 min-h-screen flex items-center  flex-col py-2 px-2  overflow-hidden md:flex md:justify-center md:items-center">
       <div className=" bg-white flex flex-col justify-center items-center  rounded-lg shadow-xl border-2 border-white py-4">
         <div className=" flex  flex-col px-2 items-center rounded-2xl md:min-w-[800px] min-w-[360px]">
           <div className="">
