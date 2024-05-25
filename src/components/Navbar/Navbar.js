@@ -65,7 +65,7 @@ export default function Navbar() {
 
           <div
             className={clsx(
-              " fixed h-full w-screen lg:hidden bg-black/50 backdrop-blur-sm md:bg-black/50 md:backdrop-blur-sm   top-0 right-0  -translate-x-full   ",
+              " fixed h-full w-screen lg:hidden bg-black/50 backdrop-blur-sm  sm:bg-black/50 sm:backdrop-blur-sm md:bg-transparent md:backdrop-blur-0   top-0 right-0  -translate-x-full   ",
               isSideMenuOpen && "translate-x-0"
             )}
             onClick={() => setMenu(false)}

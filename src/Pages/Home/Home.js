@@ -11,10 +11,10 @@ const Home = () => {
             Go Online
             <label
               htmlFor="check"
-              className="flex items-center mb-2 justify-center cursor-pointer relative"
+              className="flex items-center mb-2 justify-center cursor-pointe"
             >
               <input type="checkbox" id="check" className="sr-only peer" />
-              <span className="w-9 h-5 rounded-full peer-checked:after:bg-[#FAAF19] bg-gray-400 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#7276E8]"></span>
+              <span className="w-9 h-5 relative  rounded-full peer-checked:after:bg-[#FAAF19] bg-gray-400 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#7276E8]"></span>
             </label>
           </div>
         </div>
